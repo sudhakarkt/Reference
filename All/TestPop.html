@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/jquery.transit.min.js"></script>
+<script>
+$(document).ready(function()	{
+/*Image Animation*/
+	$('.overlay').hover	(
+	function()	{
+	  $('.image_container img').transition({ scale: 1.1});
+	  console.log("in");
+	}, 
+	function()	{
+	  $('.image_container img').transition({ scale:1});
+	  console.log("out");
+	});
+/*Menu Animation*/   
+   $('#clickme').click	(
+	function()	{
+		$('.menu').slideDown();
+	});
+	$(".hasdrop").hover	(
+	function()	{
+		$(this).children('ul').slideDown();
+	},
+	function()	{
+		$(this).children('ul').fadeOut();
+	});
+});	
+/*Menu Hide on Click*/
+
+$(document).on('mouseup', function (e) {
+if (!$(e.target).closest('.inner_wrapper').length) {
+		$('.menu').each(function () {
+			$(this).slideUp();
+		});
+	};
+});
+</script>
+<style>
+body{ font-family:arial; color:#606060;}
+a { display:block; text-decoration:none;}
+img{ max-width:100%;}
+.inner_wrapper{ width:850px; height:312px; margin:20px auto; border:1px solid rgba(0, 0, 0, 0.005); position:relative; overflow:hidden; box-shadow:0px 0px 35px rgba(0, 0, 0, 0.4);}
+.overlay { opacity:0; display:table; background-color: rgba(0, 0, 0, .7); position:absolute; top:0px; left:0px; width:100%; height:313px; -webkit-transition: opacity .8s cubic-bezier(.190, 1.000, .220, 1.000); -moz-transition: opacity .8s cubic-bezier(.190, 1.000, .220, 1.000); -o-transition: opacity .8s cubic-bezier(.190, 1.000, .220, 1.000); transition: opacity .8s cubic-bezier(.190, 1.000, .220, 1.000);}
+.overlay:hover{opacity: 1;}
+.overlay a{display:table-cell; color:#fff; font-size:25px; text-align:center; vertical-align:middle;}
+.menu { display:none; position:absolute; left:0px; top:0px;}
+.menu ul{ border:1px solid #eee; background-color:#fff; padding:0px; margin:0px; width:210px; box-shadow:5px 5px 35px rgba(256,256,256,0.3);}
+.menu ul li{ list-style-type:none; border-bottom:1px solid #eee;}
+.menu ul li:last-child{ border:none;}
+.menu ul li.hasdrop{ position:relative;}
+.menu ul li a{ color:rgba(96,96,96,0.95); padding:10px 10px 10px 10px; transition:all 0.3s ease-in-out; font-size:13px; font-family:monospace;}
+.parent:after{ content: '>>' ; color:#ff0000; padding-left:10px; font-size:10px; font-weight:bold;}
+.menu ul li a:hover{ padding-left:45px; background-color:rgba(96, 96, 96, 0.1); color:rgba(0,0,0,0.8);}
+.menu ul ul, .menu ul ul ul, .menu ul ul ul{ display:none; position:absolute; top:0px; left:211px;}
+</style>
+</head>
+<body>
+<div class="inner_wrapper">
+	<div class="image_container">
+		<a href="javascript:void(0);"><img src="images/3.png" alt="test" /></a>
+	</div>
+	<div id="clickme" class="overlay"><a href="#">VIEW</a></div>
+	<div class="menu">
+		<ul>
+			<li><a href="javascript:void(0)">Home</a></li>
+			<li><a href="javascript:void(0)">About Us</a></li>
+			<li class="hasdrop"><a href="javascript:void(0)" class="parent">My Team</a>
+				<ul>
+					<li class="hasdrop"><a href="javascript:void(0)" class="parent">Sachin Tendulkar</a>
+						<ul>
+							<li><a href="javascript:void(0)">Kamal Haasan</a></li>
+							<li><a href="javascript:void(0)">Rajinikanth</a></li>
+						</ul>
+					</li>
+					<li><a href="javascript:void(0)">Mohammed Azharudin</a></li>
+				</ul>
+			</li>
+			<li><a href="javascript:void(0)">Portfolio</a></li>
+			<li><a href="javascript:void(0)">Contact</a></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

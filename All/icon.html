@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/icon-css.css" />
+<style>
+.arrowparagraph { padding-right: 20px;}
+/* .arrowparagraph::after {
+    content:'';
+    width: 10px;
+    height: 10px;
+    background: #000;
+    background: -moz-linear-gradient(45deg, #767676 50%,#ffffff 50%);
+    background: -webkit-linear-gradient(45deg, #767676 50%,#ffffff 50%);
+    background: linear-gradient(45deg, #767676 50%,#ffffff 50%);
+    display: inline-block;
+    position: absolute;
+    right: inherit;
+    top: 17px;
+    margin-left: 10px;
+    transform:rotate(225deg);
+    transition: all ease 0.5s;
+} */
+.rotate{
+    transform:rotate(90deg);
+    transition: all ease 0.5s;
+}
+</style>
+</head>
+<body>
+    <p class="arrowparagraph">Click <a href="javascipt:void(0);">here</a> to turn the arrow <span class="arrow-right"></span></p>
+
+    <span class="arrow-up"></span>
+    <span class="arrow-down"></span>
+    <span class="arrow-left"></span>
+    <span class="arrow-right"></span>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+    <script>
+        $(document).ready(function() {
+            $('.arrowparagraph a').click(function(){
+                $(this).next('span').toggleClass('rotate');
+            });
+        })
+    </script>
+</body>
+</html>

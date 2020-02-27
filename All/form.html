@@ -1,0 +1,59 @@
+<style>
+	.form-container {
+		max-width: 500px;
+	}
+	.dflex {
+		display: flex;
+	}
+	.control-label {
+		min-width: 150px;
+	}
+	.form-field {
+	    width: 100%;
+	}
+	.form-field input, .form-field select {
+	    width: 100%;
+	}
+	.mb-2 {
+		margin-bottom: 15px;
+	}
+	.mr-3 {
+		margin-right: 15px;
+	}
+	.float-right {
+		float: right;
+	}
+</style>
+
+<div class="form-container">
+	<div class="dflex mb-2">
+		<label class="control-label">First Name</label>
+		<div class="form-field"><input type="text"/></div>
+	</div>
+	<div class="dflex mb-2">
+		<label class="control-label">Last Name</label>
+		<div class="form-field"><input type="text"/></div>
+	</div>
+	<div class="dflex mb-2">
+		<label class="control-label">Organization</label>
+		<div class="form-field"><input type="text"/></div>
+	</div>
+	<div class="dflex mb-2">
+		<label class="control-label">Email Address</label>
+		<div class="form-field"><input type="text"/></div>
+	</div>
+	<div class="dflex mb-2">
+		<label class="control-label">Checkbox</label>
+		<div class="form-field dflex">
+			<select multiple >
+				<option>ICER</option>
+				<option>CDR</option>
+				<option>MMR</option>
+			</select>		
+		</div>
+	</div>
+	<div class="dflex float-right">
+		<button type="button" class="btn mr-3">Cancel</button>
+		<button type="button" class="btn">Submit</button>
+	</div>
+</div>

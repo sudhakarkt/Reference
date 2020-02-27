@@ -1,0 +1,9 @@
+.myAwesomeElement {
+    border: 1px solid #999;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    behavior: url(/PIE/PIE.htc);
+    background: url('../images/3.png');
+}
+    

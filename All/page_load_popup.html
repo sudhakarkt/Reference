@@ -1,0 +1,45 @@
+<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function(){
+/*To Make Pop Up Center Starts*/
+function centerModal() {
+	$(this).css('display', 'block');
+	var $dialog = $(this).find(".modal-dialog");
+	//alert($dialog);
+	var offset = ($(window).height() - $dialog.height()) / 2;
+	// Center modal vertically in window
+	$dialog.css("margin-top", offset);
+}
+$('.modal').on('show.bs.modal', centerModal);
+$(window).on("resize", function () {
+	$('.modal:visible').each(centerModal);
+});	
+/*To Make Pop Up Center Ends*/
+	
+$('#overlay').modal('show');
+setTimeout(function() {
+    $('#overlay').modal('hide');
+}, 5000);
+
+});
+</script>
+<style>
+.modal-body{ padding:0px;}
+.close{ position:absolute; right:2px; top:-2px; z-index:1;}
+</style>
+<body>
+<span><img src="images/tillidsoftwares.png" alt="" class="img-responsive" /></span>
+<div class="modal fade" id="overlay">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <div class="modal-body">
+         <img src="images/stock-illustration-53070666-colorful-confetti-and-ribbons-holiday-background-with-stars.jpg" class="img-responsive" />
+      </div>
+    </div>
+  </div>
+</div>
+</body>

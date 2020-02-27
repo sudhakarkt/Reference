@@ -1,0 +1,31 @@
+<style>
+.holder{        
+    width:100%;
+    display:block;
+}
+.popup{
+    width:800px;
+    border-radius: 7px;
+    background:#6b6a63;
+    margin:30px auto 0;
+    padding:6px;
+    position:absolute;
+    left: 50%;
+  top: 50%;
+  margin-left: -400px;
+    margin-top: -40px; /* This should be half of the total height of your div */
+}
+
+.content{
+    background:#fff;
+    padding: 28px 26px 33px 25px;
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<div class="holder">     
+	<div id="popup" class="popup">            
+		<div class="content">
+			<p>some lengthy text</p>
+		</div>
+	</div>
+</div>

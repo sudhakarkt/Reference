@@ -1,0 +1,119 @@
+﻿
+<div id="emailBodyContent">
+    <p style="font-family: Verdana; font-size: 15px; font-style: italic; margin-top: 10px;">Dear Member,</p>
+    <p style="font-family: Verdana; font-size: 15px; font-style: italic; margin-top: 20px;">The below call report has been submitted</p>
+    <!-- Do not change below table contents started -->
+    <table width="100%" style="border: 1px solid #DDD; border-collapse: collapse; font-family: verdana; font-size: 12px;">
+        <tbody id="commontable">
+            <tr>
+                <td style="padding: 14px 10px; border: 1px solid #8a8585; text-align: left;" colspan="4" width="50%">
+                    <table style="font-size: 13px;">
+                        <tr>
+                            <td style="padding-right: 20px; min-width: 230px; text-transform: uppercase; font-weight: 600;font-size: 12px;">Title :</td>
+                            <td>
+                                <p style="margin: 0;font-size: 12px;">{{Title}}</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td style="padding: 14px 10px; border: 1px solid #8a8585; text-align: left;" colspan="4" width="50%">
+                    <table style="font-size: 13px;">
+                        <tr>
+                            <td style="padding-right: 20px; min-width: 230px; text-transform: uppercase; font-weight: 600;font-size: 12px;">Call Report For Week of :</td>
+                            <td>
+                                <p style="margin: 0;font-size: 12px;">{{Weekof}}</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding: 15px 10px; border: 1px solid #8a8585; vertical-align: middle;" colspan="4" width="50%">
+                    <table style="font-size: 13px;">
+                        <tr>
+                            <td style="padding-right: 20px; min-width: 230px;font-size: 12px;">DSO, Study Club, Lab Progress :</td>
+                            <td>
+                                <p style="margin: 0;font-size: 12px;">{{Studyclub}}</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+
+                <td style="padding: 15px 10px; border: 1px solid #8a8585; vertical-align: middle;" colspan="4" width="50%">
+                    <table style="font-size: 13px;">
+                        <tr>
+                            <td style="padding-right: 20px; min-width: 230px;font-size: 12px;">Notes, Questions, Comments :</td>
+                            <td>
+                                <p style="margin: 0;font-size: 12px;">{{Comments}}</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table width="100%" style="border: 1px solid #DDD; border-collapse: collapse; font-family: verdana; font-size: 12px; margin-top: 20px;">
+        <tbody id="weektable">
+            <tr style="background-color: #e2e2e2;">
+                <th style="padding: 15px 10px; border: 1px solid #8a8585; width: 120px;">Week</th>
+                <th style="padding: 15px 10px; border: 1px solid #8a8585; width: 120px;">City</th>
+                <th style="padding: 15px 10px; border: 1px solid #8a8585; width: 120px; white-space: nowrap;"># of Visits</th>
+                <th style="padding: 15px 10px; border: 1px solid #8a8585; white-space: nowrap;">New Customers</th>
+                <th style="padding: 15px 10px; border: 1px solid #8a8585; width: 100px;"># Existing<br />
+                Customers</th>
+                <th style="padding: 15px 10px; border: 1px solid #8a8585; width: 100px; white-space: nowrap;">Sales<br />
+                ($)</th>
+                <th style="padding: 15px 10px; border: 1px solid #8a8585; width: 100px;">Pending Sales<br />
+                ($)</th>
+                <th style="padding: 15px 10px; border: 1px solid #8a8585; white-space: nowrap;">Follow Up</th>
+            </tr>
+        
+            <tr>
+                <td style="padding: 15px 10px; border: 1px solid #8a8585; text-align: left;">
+                    <p style="margin: 0 0 5px 0;">{{Weekday}}</p>
+                    <p style="margin: 0;">{{Weekdate}}</p>
+                </td>
+                <td style="padding: 15px 10px; border: 1px solid #8a8585;">
+                    <p style="margin: 0;">{{City}} </p>
+                    <p style="margin: 5px 0;"><strong>Co-travel : </strong>{{Cotravelactive}}</p>
+                    <p style="margin: 0;">{{Cotravelselect}}</p>
+                    <p style="margin: 5px 0 0 0;"><strong>Rep name : </strong></br>{{Repname}}</p>
+                </td>
+                <td style="padding: 15px 10px; border: 1px solid #8a8585; vertical-align: middle; text-align: right;">
+                    <p style="margin: 0;">{{Vists}}</p>                            
+                </td>
+                <td style="padding: 15px 10px; border: 1px solid #8a8585; vertical-align: middle;">
+                    <p style="margin: 0;">{{Newcustomer}}</p>
+                </td>
+                <td style="padding: 15px 10px; border: 1px solid #8a8585; vertical-align: middle; text-align: right;">
+                    <p style="margin: 0;">{{Existingcustomer}}</p>
+                </td>
+                <td style="padding: 15px 10px; border: 1px solid #8a8585; vertical-align: middle; text-align: right;">
+                    <p style="margin: 0;">{{Sales}}</p>
+                </td>
+                <td style="padding: 15px 10px; border: 1px solid #8a8585; vertical-align: middle; text-align: right;">
+                    <p style="margin: 0;">{{PendingSales}}</p>
+                </td>
+                <td style="padding: 15px 10px; border: 1px solid #8a8585; vertical-align: middle;">
+                    <p style="margin: 0;">{{Followup}}</p>
+                </td>
+                <td style="padding: 15px 10px; border: 1px solid #8a8585; display: none">                           
+                </td>
+            </tr> 
+            <tr id="totaltable" style="background-color: #e2e2e2;">
+                <th style="padding: 15px 10px; border: 1px solid #8a8585;"></th>
+                <th style="padding: 15px 10px; border: 1px solid #8a8585;" align="center">Total</th>
+                <th style="padding: 15px 10px; border: 1px solid #8a8585; text-align: right;">{{Totalvistis}}</th>
+                <th style="padding: 15px 10px; border: 1px solid #8a8585;"></th>
+                <th style="padding: 15px 10px; border: 1px solid #8a8585; text-align: right;">{{Totalexistingcustomer}}</th>
+                <th style="padding: 15px 10px; border: 1px solid #8a8585; text-align: right;">${{Totalsales}}</th>
+                <th style="padding: 15px 10px; border: 1px solid #8a8585; text-align: right;">${{Totalpendingsales}}</th>
+                <th style="padding: 15px 10px; border: 1px solid #8a8585;"></th>              
+            </tr>
+        </tbody>
+    </table>
+    <!-- Do not change below table contents ended -->
+    <p style="font-family: Verdana; font-size: 15px; font-style: italic; margin-top: 30px;">Thanks.</p>
+	<p style="font-family: Verdana; font-size: 15px; font-style: italic; margin-top: 30px;">Call report Admin team</p>
+</div>

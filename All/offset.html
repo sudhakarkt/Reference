@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+body{ position:relative;}
+*{ transition:ease all 0.5s;}
+.left_container, .right_container{ float:left;}
+.left_container{ width:15%;}
+.right_container{ width:85%;}
+h2 span{ display:none;}
+h2, ul{ margin:0px;}
+.overlay{ display:none;}
+ul{ padding:0px; margin:0px;}
+@media (max-width:767px) {
+.right_container{ width:100%;}
+h2{ display:block;}
+h2 span{ display:inline-block;}
+.left_container{ display:none;}
+.left_container{ position:absolute; left:50%; top:0; z-index:2;}
+.left_container li{ list-style-type:none;}
+.left_container li a{ color:#fff;}
+.yes{ display:block;}
+.overlay{ background-color:rgba(0,0,0,0.5); position:absolute; left:0px; right:0px; height:300px; z-index:1;}
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("span").click(function(){
+		$('.left_container').show();
+		$('.overlay').show();
+	});
+	$(".overlay").click(function(){
+		$(this).hide();
+		$('.left_container').hide();
+	});
+});
+
+</script>
+</head>
+<body>
+<div class="left_container">
+	<ul class="menu">
+		<li><a href="#">Home1</a></li>
+		<li><a href="#">Home2</a></li>
+		<li><a href="#">Home3</a></li>
+		<li><a href="#">Home4</a></li>
+		<li><a href="#">Home5</a></li>
+		<li><a href="#">Home6</a></li>
+		<li><a href="#">Home7</a></li>
+		<li><a href="#">Home8</a></li>
+		<li><a href="#">Home9</a></li>
+		<li><a href="#">Home10</a></li>
+	</ul>
+</div>	
+<div class="overlay"></div>
+<div class="right_container">
+	<h2>Chrome DevTools <span>Click here</span></h2>
+	<p>Chrome DevTools has several built-in shortcut keys that developers can use to save time in their day to day workflow. This guide provides a quick reference to each shortcut availabe in Chrome DevTools. While some shortcuts are available globally, others are specific to a single panel, and are broken up based on where it can be used.</p>
+	<p>Chrome DevTools has several built-in shortcut keys that developers can use to save time in their day to day workflow. This guide provides a quick reference to each shortcut availabe in Chrome DevTools. While some shortcuts are available globally, others are specific to a single panel, and are broken up based on where it can be used.</p>
+	<p>Chrome DevTools has several built-in shortcut keys that developers can use to save time in their day to day workflow. This guide provides a quick reference to each shortcut availabe in Chrome DevTools. While some shortcuts are available globally, others are specific to a single panel, and are broken up based on where it can be used.</p>
+	<p>Chrome DevTools has several built-in shortcut keys that developers can use to save time in their day to day workflow. This guide provides a quick reference to each shortcut availabe in Chrome DevTools. While some shortcuts are available globally, others are specific to a single panel, and are broken up based on where it can be used.</p>
+	<p>Chrome DevTools has several built-in shortcut keys that developers can use to save time in their day to day workflow. This guide provides a quick reference to each shortcut availabe in Chrome DevTools. While some shortcuts are available globally, others are specific to a single panel, and are broken up based on where it can be used.</p>
+	<p>Chrome DevTools has several built-in shortcut keys that developers can use to save time in their day to day workflow. This guide provides a quick reference to each shortcut availabe in Chrome DevTools. While some shortcuts are available globally, others are specific to a single panel, and are broken up based on where it can be used.</p>
+	<p>Chrome DevTools has several built-in shortcut keys that developers can use to save time in their day to day workflow. This guide provides a quick reference to each shortcut availabe in Chrome DevTools. While some shortcuts are available globally, others are specific to a single panel, and are broken up based on where it can be used.</p>
+	<p>Chrome DevTools has several built-in shortcut keys that developers can use to save time in their day to day workflow. This guide provides a quick reference to each shortcut availabe in Chrome DevTools. While some shortcuts are available globally, others are specific to a single panel, and are broken up based on where it can be used.</p>
+	<p>Chrome DevTools has several built-in shortcut keys that developers can use to save time in their day to day workflow. This guide provides a quick reference to each shortcut availabe in Chrome DevTools. While some shortcuts are available globally, others are specific to a single panel, and are broken up based on where it can be used.</p>
+	<p>Chrome DevTools has several built-in shortcut keys that developers can use to save time in their day to day workflow. This guide provides a quick reference to each shortcut availabe in Chrome DevTools. While some shortcuts are available globally, others are specific to a single panel, and are broken up based on where it can be used.</p>
+</div>
+</body>
+</html>

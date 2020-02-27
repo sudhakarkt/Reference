@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	$('#click').click(function(){
+		$(function() {
+			$( "#dialog" ).dialog();
+		});
+		$("#dialog").dialog( "option", "width", 460 );
+	});
+
+	
+});
+</script>
+
+<style type="text/css">
+	.table{ border:1px solid #ccc; border-right: none;}
+	.table>tbody>tr>td, .table>tbody>tr>th, .table>thead>tr>td, table>thead>tr>th { padding: 8px; line-height: 1.42857143; vertical-align: top;}
+	.table>thead>tr>th, .table>tbody>tr>td{ border-top: 1px solid #ddd; border-right: 1px solid #ccc;}
+	.table>thead>tr>th{ border-top:none;}
+	.inptfil{ position:absolute;z-index:2;top:0;left:0px; width: 78px; height: 30px; /*filter: alpha(opacity=0);-ms-filter:&quot;progid:DXImageTransform.Microsoft.Alpha(Opacity=0)&quot;;opacity:0; */ background-color:transparent;color:transparent;}
+	.inline_list{ margin:15px 0px 0px; padding:0px;}
+	.inline_list li{ display: inline-block; position: relative;}
+	.flush_rit{ float:right;}
+	.dflt_btn{ background-color:#e3e3e3; border-radius: 4px; padding:6px 8px;}
+	a.dflt_btn{ text-decoration: none; color:#333; display: block;}
+	.popform{ padding: 0px; margin:10px 0;}
+	.popform li{ position: relative; display: table-cell; vertical-align: middle;}
+	.popform li span{ min-width: 78px; display: inline-block;}
+	.popform li:first-child{ min-width: 150px;}
+	.popform li:last-child{ width:350px; }
+	.popform li:last-child input, textarea{ width:100%; }
+	.ui-widget{ font-size:12px;}
+	.ui-widget-header{ font-size:15px;}
+	#dialog{ display: none; }
+</style>
+<table class="table" width="100%" cellpadding="0" cellspacing="0">
+	<thead>
+		<tr>
+			<th></th>
+			<th>Doccument Title</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><input type="checkbox" name="one"></td>
+			<td>INNOVATION ENGINE</td>
+			<td>Nonummy Nibh</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="two"></td>
+			<td>INNOVATION ENGINE</td>
+			<td>Nonummy Nibh</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="three"></td>
+			<td>INNOVATION ENGINE</td>
+			<td>Nonummy Nibh</td>
+		</tr>
+	</tbody>
+</table>
+<ul class="inline_list">
+	<li><a class="dflt_btn" id="click" href="javascript:void(0);">Add File</a></li>
+	<li><button type="button" class="dflt_btn">Delete File</button></li>
+	<li><span class="label label-info" id="upload-file-info"></span></li>
+</ul>
+<p class="flush_rit"><button type="button" class="dflt_btn">Submit</button></p>
+<div id="dialog" class="popcont" title="Basic dialog">
+	<ul class="popform"><li>Document Title</li><li><input type="text" id="1"></li></ul>
+	<ul class="popform"><li>Description</li><li><textarea placehodler="Enter your text here..." rows="5" cold="10"></textarea></li></ul>
+	<p class="flush_rit"><button type="button" class="dflt_btn">Save</button></p>
+</div>

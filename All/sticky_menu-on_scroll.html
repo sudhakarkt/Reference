@@ -1,0 +1,243 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="http://golf.cloud3.dxb.io/en/Style%20Library/NBOGolfStyleEN/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://golf.cloud3.dxb.io/en/Style%20Library/NBOGolfStyleEN/css/responsive.css" rel="stylesheet">
+<link href="http://golf.cloud3.dxb.io/en/Style%20Library/NBOGolfStyleEN/css/main.css" rel="stylesheet">
+<script>
+$(document).on("ready",function() {
+// sticky sub menu
+function stickyScroll(){
+
+	var contWidth = $('.container').width();		
+	if ($(window).scrollTop()) {
+		$('.sub-nav').addClass('sticky_submenu');
+	} else {
+		$('.sub-nav').removeClass('sticky_submenu');
+	}
+
+}
+$(window).scroll(function() {
+	stickyScroll();
+});
+});
+</script>
+
+<header>
+    <!-- search-form -->
+    <div class="search">
+        <form role="search" class="navbar-search">
+            <input type="text" placeholder="I AM LOOKING FOR..." class="form-control col-xs-24">
+            <input type="submit" class="search-btn">
+        </form>
+    </div>
+
+    <!-- toggle-menu -->
+    <div class="menu-wrapper">
+        <a href="#" class="sprite close-icon">close</a>
+        <div class="menu-section-top">
+            <ul class="nav-menu">
+                <li><a href="#">Grand Final </a></li>
+                <li><a href="#">Spectators</a></li>
+                <li><a href="#">Players</a></li>
+                <li><a href="#">Hospitality</a></li>
+                <li><a href="#">Road to Oman</a></li>
+                <li><a href="#">Pro-am </a></li>
+            </ul>
+        </div>
+        <div class="menu-section-bottom">
+            <ul class="links">
+                <li><a href="#">Community</a></li>
+                <li><a href="#">News &amp; Gallery</a></li>
+                <li><a href="#">Sponsors</a></li>
+                <li><a class="arabic" href="#">العربية</a></li>
+            </ul>
+            <ul class="social-link">
+                <li><a class="sprite social-icon" href="#">social links</a>
+                    <ul>
+                        <li><a class="sprite facebook" href="#"></a></li>
+                        <li><a class="sprite twitter" href="#"></a></li>
+                        <li><a class="sprite gplus" href="#"></a></li>
+                        <li><a class="sprite pinterest" href="#"></a></li>
+                        <li><a class="sprite mail" href="#"></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- navbar -->
+    <div class="container">
+        <div class="logo-wrapper">
+            <a class="logo" href="#"><img src="images/logo.png" alt="logo"></a>
+            <a class="small-logo" href="#"><img src="images/challenge_logo.png" alt="logo"></a>
+        </div>
+        <div class="navbar">
+            <button type="button" class="navbar-toggle">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+            </button>
+            <span class="search-btn visible-xs">search</span>
+            <nav class="main-navbar">
+                <div class="top-menu">
+                    <span class="search-icon">search</span>
+                    <ul class="social">
+                        <li><a class="sprite social-icon" href="#">social links</a>
+                            <ul>
+                                <li><a class="sprite facebook" href="#"></a></li>
+                                <li><a class="sprite twitter" href="#"></a></li>
+                                <li><a class="sprite gplus" href="#"></a></li>
+                                <li><a class="sprite pinterest" href="#"></a></li>
+                                <li><a class="sprite mail" href="#"></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="links">
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">News &amp; Gallery</a></li>
+                        <li><a href="#">العربية</a></li>
+                    </ul>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#">Grand Final </a></li>
+                    <li><a href="#">Spectators</a></li>
+                    <li><a class="active" href="#">Players</a></li>
+                    <li><a href="#">Hospitality</a></li>
+                    <li><a href="#">Road to Oman</a></li>
+                    <li><a href="#">Pro-am </a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- end of navbar -->
+    </div>
+</header>
+<div class="container">    
+    <div class="sub-nav players-nav">
+        <ul>
+            <li class=""><a href="#featuredplayers">FEATURED PLAYERS</a></li>
+            <li class="active"><a href="#pastwinners">PAST WINNERS</a></li>
+            <li><a href="#omaniplayers">OMANI PLAYERS</a></li>
+        </ul>
+    </div>
+</div>
+<section class="player section" id="featuredplayers">
+    <!-- banner -->
+    <div class="container">
+        <div class="spotlight-wrapper">
+            <ul class="spotlight-slider owl-carousel owl-theme" id="player-slider" style="opacity: 1; display: block;">
+                <div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 5760px; left: 0px; display: block;"><div class="owl-item" style="width: 1440px;"><li class="item">
+                    <img class="img-responsive " src="images/040_banner.jpg" alt="">
+                    <div class="player-slider-details">
+                        <h1>MATHEW FITZPATRICK</h1>
+                        <p>Mathew Fitzpatrick is one of the most exciting golfing talents in the world. The 19 year old from Sheffield is the reigning US Amateur champion and Open Championship silver medallist.</p>
+                        <a href="#" class="viewlink-btn">View BIO</a>
+                        <a href="#" class="viewlink-btn">Scorecard</a>
+                    </div>
+                </li></div><div class="owl-item" style="width: 1440px;"><li class="item">
+                    <img class="img-responsive" src="images/040_banner.jpg" alt="">
+                    <div class="player-slider-details">
+                        <h1>MATHEW FITZPATRICK</h1>
+                        <p>Mathew Fitzpatrick is one of the most exciting golfing talents in the world. The 19 year old from Sheffield is the reigning US Amateur champion and Open Championship silver medallist.</p>
+                        <a href="#" class="viewlink-btn">View BIO</a>
+                        <a href="#" class="viewlink-btn">Scorecard</a>
+                    </div>
+                </li></div></div></div>            
+                
+            <div class="owl-controls clickable"><div class="owl-buttons"><div class="owl-prev">prev</div><div class="owl-next">next</div></div></div></ul>
+            <!-- sponsor-link -->
+            <div class="sticky-sponsor">
+                <img src="images/sponsor_sticky.jpg" alt="">
+            </div>
+            <!-- sticky-sponsor   -->
+            <div class="sp-sticky-wrapper">
+                <a href="#" class="sprite sp-close-icon">close</a>
+                <h3>sponsors</h3>
+                <ul>
+                    <li><a href="#"><img src="images/sponsor_sm_01.png" alt="sponsor"></a></li>
+                    <li><a href="#"><img src="images/sponsor_sm_02.png" alt="sponsor"></a></li>
+                    <li><a href="#"><img src="images/sponsor_sm_03.png" alt="sponsor"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="player section" id="featuredplayers">
+    <!-- banner -->
+    <div class="container">
+        <div class="spotlight-wrapper">
+            <ul class="spotlight-slider owl-carousel owl-theme" id="player-slider" style="opacity: 1; display: block;">
+                <div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 5760px; left: 0px; display: block;"><div class="owl-item" style="width: 1440px;"><li class="item">
+                    <img class="img-responsive " src="images/040_banner.jpg" alt="">
+                    <div class="player-slider-details">
+                        <h1>MATHEW FITZPATRICK</h1>
+                        <p>Mathew Fitzpatrick is one of the most exciting golfing talents in the world. The 19 year old from Sheffield is the reigning US Amateur champion and Open Championship silver medallist.</p>
+                        <a href="#" class="viewlink-btn">View BIO</a>
+                        <a href="#" class="viewlink-btn">Scorecard</a>
+                    </div>
+                </li></div><div class="owl-item" style="width: 1440px;"><li class="item">
+                    <img class="img-responsive" src="images/040_banner.jpg" alt="">
+                    <div class="player-slider-details">
+                        <h1>MATHEW FITZPATRICK</h1>
+                        <p>Mathew Fitzpatrick is one of the most exciting golfing talents in the world. The 19 year old from Sheffield is the reigning US Amateur champion and Open Championship silver medallist.</p>
+                        <a href="#" class="viewlink-btn">View BIO</a>
+                        <a href="#" class="viewlink-btn">Scorecard</a>
+                    </div>
+                </li></div></div></div>            
+                
+            <div class="owl-controls clickable"><div class="owl-buttons"><div class="owl-prev">prev</div><div class="owl-next">next</div></div></div></ul>
+            <!-- sponsor-link -->
+            <div class="sticky-sponsor">
+                <img src="images/sponsor_sticky.jpg" alt="">
+            </div>
+            <!-- sticky-sponsor   -->
+            <div class="sp-sticky-wrapper">
+                <a href="#" class="sprite sp-close-icon">close</a>
+                <h3>sponsors</h3>
+                <ul>
+                    <li><a href="#"><img src="images/sponsor_sm_01.png" alt="sponsor"></a></li>
+                    <li><a href="#"><img src="images/sponsor_sm_02.png" alt="sponsor"></a></li>
+                    <li><a href="#"><img src="images/sponsor_sm_03.png" alt="sponsor"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="player section" id="featuredplayers">
+    <!-- banner -->
+    <div class="container">
+        <div class="spotlight-wrapper">
+            <ul class="spotlight-slider owl-carousel owl-theme" id="player-slider" style="opacity: 1; display: block;">
+                <div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 5760px; left: 0px; display: block;"><div class="owl-item" style="width: 1440px;"><li class="item">
+                    <img class="img-responsive " src="images/040_banner.jpg" alt="">
+                    <div class="player-slider-details">
+                        <h1>MATHEW FITZPATRICK</h1>
+                        <p>Mathew Fitzpatrick is one of the most exciting golfing talents in the world. The 19 year old from Sheffield is the reigning US Amateur champion and Open Championship silver medallist.</p>
+                        <a href="#" class="viewlink-btn">View BIO</a>
+                        <a href="#" class="viewlink-btn">Scorecard</a>
+                    </div>
+                </li></div><div class="owl-item" style="width: 1440px;"><li class="item">
+                    <img class="img-responsive" src="images/040_banner.jpg" alt="">
+                    <div class="player-slider-details">
+                        <h1>MATHEW FITZPATRICK</h1>
+                        <p>Mathew Fitzpatrick is one of the most exciting golfing talents in the world. The 19 year old from Sheffield is the reigning US Amateur champion and Open Championship silver medallist.</p>
+                        <a href="#" class="viewlink-btn">View BIO</a>
+                        <a href="#" class="viewlink-btn">Scorecard</a>
+                    </div>
+                </li></div></div></div>            
+                
+            <div class="owl-controls clickable"><div class="owl-buttons"><div class="owl-prev">prev</div><div class="owl-next">next</div></div></div></ul>
+            <!-- sponsor-link -->
+            <div class="sticky-sponsor">
+                <img src="images/sponsor_sticky.jpg" alt="">
+            </div>
+            <!-- sticky-sponsor   -->
+            <div class="sp-sticky-wrapper">
+                <a href="#" class="sprite sp-close-icon">close</a>
+                <h3>sponsors</h3>
+                <ul>
+                    <li><a href="#"><img src="images/sponsor_sm_01.png" alt="sponsor"></a></li>
+                    <li><a href="#"><img src="images/sponsor_sm_02.png" alt="sponsor"></a></li>
+                    <li><a href="#"><img src="images/sponsor_sm_03.png" alt="sponsor"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

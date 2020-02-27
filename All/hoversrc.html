@@ -1,0 +1,31 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(document).ready(function () {
+ $(function () {
+          $(".test .imgLogin1")
+              .mouseover(function () {
+                  var src = $(this).attr("src").match(/[^\.]+/) + "_hover.png";
+                  $(this).attr("src", src);
+              })
+              .mouseout(function () {
+                  var src = $(this).attr("src").replace("sign_in_hover.png", "sign_in.png");
+                  $(this).attr("src", src);
+              });
+      });
+
+      $(function () {
+          $("#ins_lgn").click(function () {
+              $('.insrd_login').slideDown("slow");
+              // $(this).toggleClass("highlight");
+
+          });
+      });
+	  });
+
+</script>
+<style>
+.test img{ cursor:pointer;}
+</style>
+<div class="test">
+<img class="imgLogin1" src="images/sign_in.png" /> 
+</div>

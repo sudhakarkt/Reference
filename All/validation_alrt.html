@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<meta charset=utf-8 />
+<meta name="viewport" content="width=device-width">
+<title>JS Bin</title>
+  <script type='text/javascript'>
+    $(function(){
+      $("#check").click(function(){
+	    if(!$("input").val()){
+          $( "input" ).addClass("test");
+        }
+		});
+		
+		$("input").keyup(function(){
+    $( "input" ).removeClass("test");
+});
+		
+    });
+  </script>
+  <style>
+  .test{ border:2px inset #ff0000;}
+  input:focus{ padding:2px;}
+  </style>
+</head>
+<body>
+  <input id='example' /><button id='check'>Check</button>
+  <video  width="320" height="240" controls="" autoplay="" name="media"><source src="http://www.skypeassets.com/content/dam/scom/images/qik/Qik_Launch_Website_Header.mp4" type="video/mp4"></video>
+</body>
+</html>

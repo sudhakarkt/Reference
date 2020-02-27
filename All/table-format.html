@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>SharePoint</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/atatanasov/gijgo@1.7.3/dist/combined/css/gijgo.min.css"  />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pickr-widget/dist/pickr.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <style>
+         .CFContainer { 
+             border-left: 1px solid #dedede;
+             border-bottom: 1px solid #dedede;
+         }
+        .CFContainer .cfcolumn {
+            border-right: 1px solid #dedede;
+            border-top: 1px solid #dedede;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid CFContainer">
+        <div class="row">
+            <div class="col-md-2 cfcolumn">#</div>
+            <div class="col-md-5 cfcolumn">Field</div>
+            <div class="col-md-5 cfcolumn">Value</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 cfcolumn">#</div>
+            <div class="col-md-5 cfcolumn">Field</div>
+            <div class="col-md-5 cfcolumn">Value</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 cfcolumn">#</div>
+            <div class="col-md-5 cfcolumn">Field</div>
+            <div class="col-md-5 cfcolumn">Value</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 cfcolumn">#</div>
+            <div class="col-md-5 cfcolumn">Field</div>
+            <div class="col-md-5 cfcolumn">Value</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 cfcolumn">#</div>
+            <div class="col-md-5 cfcolumn">Field</div>
+            <div class="col-md-5 cfcolumn">Value</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 cfcolumn">#</div>
+            <div class="col-md-5 cfcolumn">Field</div>
+            <div class="col-md-5 cfcolumn">Value</div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="col-md-4">
+            <div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
+        </div>
+    </div>
+</body>
+<script>
+    window.onload = function() {
+    
+    var chart = new CanvasJS.Chart("chartContainer", {
+        theme: "light2", // "light1", "light2", "dark1", "dark2"
+        exportEnabled: true,
+        animationEnabled: true,
+        title: {
+            text: "Analysis"
+        },
+        data: [{
+            type: "pie",
+            startAngle: 25,
+            toolTipContent: "<b>{label}</b>: {y}%",
+            showInLegend: "true",
+            legendText: "{label}",
+            indexLabelFontSize: 16,
+            indexLabel: "{label} - {y}%",
+            dataPoints: [
+                { y: 85, label: "Sudhakar" },
+                { y: 15, label: "Gopal" }
+            ]
+        }]
+    });
+    chart.render();
+    
+    }
+    </script>
+    
+<script src="piechart/canvasjs.min.js"></script>
+
+</html>

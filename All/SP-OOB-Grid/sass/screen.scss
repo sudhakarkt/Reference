@@ -1,0 +1,235 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+//@import "compass/reset";
+.maincontainer {
+
+  .categoryHeader {
+    margin: 10px 0 0;
+    font-size: 18px;
+    color: #000;
+    font-weight: 600;
+    padding: 5px 0px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #bfbfbf;
+    cursor: pointer;
+  }
+
+  .gridRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 !important;
+    border-bottom: none;
+    border-collapse: collapse;
+
+    .gridCell {
+      display: flex;
+      justify-content: flex-start;
+      align-self: stretch;
+      flex: 1;
+      padding: 0 8px 0 12px;
+      border-right: 1px solid #eaeaea;
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    &.gridHeader {
+      align-items: center;
+      border-bottom: none;
+
+      .gridCell {
+        white-space: nowrap;
+        max-height: 32px;
+        align-items: center;
+
+        &:hover {
+          background-color: #f4f4f4;
+        }
+
+        .gridCellHeader {
+          align-self: center;
+
+          .taskCheckboxInner {
+            visibility: hidden;
+            display: flex;
+            width: 40px;
+            height: 32px;
+            justify-content: center;
+            align-items: center;
+          }
+          .taskDocument {
+
+            button {
+              margin: 0 auto;
+            }
+          }
+          button {
+            max-height: 32px;
+            padding: 0;
+            border: none;
+
+            * {
+              margin: 0px;
+            }
+
+            i {
+              order: 2;
+              color: #666666;
+              padding-left: 4px;
+            }
+
+            &:hover {
+              color: #000;
+            }
+          }
+          button > div {
+            display: flex;
+          }
+        }
+      }
+    }
+
+    &.gridContent {
+        margin: 0px !important;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #f4f4f4 !important;
+        }
+
+        &.selected {
+            background-color: #eaeaea !important;
+            border-bottom: 1px solid #ffffff;
+        }
+    }
+    .gridCell {
+        word-break: break-word;
+
+        .taskCheckboxInner {
+          visibility: hidden;
+          display: flex;
+          width: 40px;
+          height: 42px;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &.taskCheckbox {
+            padding: 0 !important;
+            text-align: center;
+            justify-content: center;
+            
+            max-width: 40px;
+        }
+      
+        &.taskCount {
+            
+        }
+      
+        &.taskItem {
+            
+
+            button {
+              background: none;
+            }
+
+            button * {
+              color: #000;
+            }
+        }
+      
+        &.taskDetails {
+            
+
+            &:hover {
+              background: #eaeaea;
+            }
+      
+            button {
+              min-width: auto;
+              visibility: hidden;
+              width: 5px;
+            }
+        }
+      
+        &.taskStatus {
+            
+        }
+      
+        &.taskDocument {
+            
+        }
+      
+        &.taskresParty {
+            text-align: left;
+            
+        }
+      
+        &.taskComments {
+            
+        }
+
+        &.taskDocument {
+          
+            button {
+                display: flex;
+                align-items: center;
+    
+                i {
+                    margin-right: 5px;
+                    color: #008ee1;
+                }
+            }
+        }
+    }
+  }
+
+  .showactions {
+    background: transparent;
+    height: auto;
+    padding: 0;
+  }
+
+  .showactions i:nth-child(2) {
+    display: none;
+  }
+}
+.hidden {
+  display: none;
+}
+
+.collapsed {
+
+    .gridContent {
+        display: flex;
+    }
+}
+.expanded {
+
+    .gridContent {
+        display: none;
+    }
+}
+
+.gridRow.gridHeader:hover .taskCheckboxInner {
+    visibility: visible !important;
+}
+
+.gridRow.gridContent:hover .taskCheckboxInner,
+.gridRow.gridContent.selected .taskCheckboxInner,
+.gridRow.gridContent:hover .taskDetails button {
+    visibility: visible !important;
+}
+
+@media all and (-ms-high-contrast: none) {
+    .gridContent {
+        .gridCell {
+            word-break: break-all;
+        }
+    }
+}

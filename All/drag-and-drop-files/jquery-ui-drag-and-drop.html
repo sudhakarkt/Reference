@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery UI Draggable - Visual feedback</title>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style>
+		.connected-container {
+			background-color: #fffcfc;
+			border: 1px solid #f5f3f3;
+			height: calc(100% - 25px);
+			max-height: 150px;
+    		overflow: auto;
+		}
+
+		.draggable {
+			cursor: move;
+			display: block;
+			background-color: #f7f4f4;
+			margin: 1px 0px;
+			padding: 5px;
+		}
+
+		.drag-drop-header {
+			font-weight: 400;
+			text-align: center;
+			padding: 3px;
+			margin: 0px;
+			background-color: #e1e8e6;
+		}
+
+		.ui-state-highlight { 
+			height: 34px;
+			background-color: #f7f4f4;
+			border: none;
+		}
+	</style>
+</head>
+
+<body>
+<div class="container mt-5">
+	<div class="row">
+		<div class="col">
+			<h6 class="drag-drop-header">HEADER</h6>
+			<div id="draggable-container" class="connected-container">
+				<div class="draggable">Order 1</div>
+				<div class="draggable">Order 2</div>
+				<div class="draggable">Order 3</div>
+				<div class="draggable">Order 4</div>
+				<div class="draggable">Order 5</div>
+				<div class="draggable">Order 6</div>
+				<div class="draggable">Order 7</div>
+				<div class="draggable">Order 8</div>
+			</div>
+		  </div>
+		
+		  <div class="col">
+			<h6 class="drag-drop-header">HEADER</h6>
+			  <div id="droppable-container" class="connected-container"></div>
+		  </div>
+
+		  <div class="col">
+			<h6 class="drag-drop-header">HEADER</h6>
+			<div id="droppable-container" class="connected-container"></div>
+		</div>
+
+		<div class="col">
+			<h6 class="drag-drop-header">HEADER</h6>
+			<div id="droppable-container" class="connected-container"></div>
+		</div>
+	</div>
+</div>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+	<script>
+		$(function() {
+			$("#draggable-container, #droppable-container").sortable({
+				placeholder: "ui-state-highlight",
+				connectWith: ".connected-container"
+			}).disableSelection();
+		});
+	</script>
+
+</body>
+</html>

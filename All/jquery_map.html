@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+        html, body, #map-canvas {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+		.container{ width:600px; margin:0 auto;}
+		.right{ background-color:red; padding:3px;}
+		.left, .right{ float:left; width:48%;}
+    </style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false">
+    </script>
+    <script>
+        var map;
+        function initialize() {
+          var mapOptions = {
+            zoom: 8,
+            center: new google.maps.LatLng(-34.397, 150.644),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+          };
+          map = new google.maps.Map(document.getElementById('map-canvas'),
+              mapOptions);
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+		
+		$(document).ready(function()
+		{
+			var Map_Height = $(".right").outerHeight();
+			console.log(Map_Height);
+			$(".left").height(Map_Height);
+		});
+		
+    </script>
+</head>
+<body>
+<div class="container">
+   <div class="left">
+        <div id="map-canvas"></div>
+    </div>
+	<div class="right">
+        <p>In publishing and graphic design, lorem ipsum (derived from Latin dolorem ipsum, translated as "pain itself") is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation. Replacing meaningful content with placeholder text allows viewers to focus on graphic aspects such as font, typography, and page layout without being distracted by the content. It also reduces the need for the designer to come up with meaningful text, as they can instead use quickly-generated lorem ipsum.</p>
+
+<p>The lorem ipsum text is typically a scrambled section of De finibus bonorum et malorum, a 1st-century BC Latin text by Cicero, with words altered, added, and removed to make it nonsensical, improper Latin.</p>
+
+<p>A variation of the ordinary lorem ipsum text has been used in typesetting since the 1960s or earlier, when it was popularized by advertisements for Letraset transfer sheets. It was introduced to the Information Age in the mid-1980s by Aldus Corporation, which employed it in graphics and word processing templates for its desktop publishing program, PageMaker, for the Apple Macintosh.[1]
+    </div>
+</div>
+</body>
+</html>

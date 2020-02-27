@@ -1,0 +1,483 @@
+.mainContainer {
+    box-sizing: border-box;
+    position: relative;
+    min-height: 500px;
+    overflow: auto;
+
+    * {
+         box-sizing: border-box;
+    }
+
+    .taskListWrapper {
+         position: absolute;
+         left: 0;
+         right: 0; 
+         top: 0;
+         bottom: 0;
+         background: transparent;
+         z-index: 9999;
+
+         .spinnerText div {
+              text-shadow: 2px 0 9px rgba(0, 0, 0, 0.5);
+              color: #FFF;
+         }
+         .loadingWrapper {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+         }
+    }
+
+    .taskLoadingWrapper {
+         background: rgba(0, 0, 0, 0.33);
+     }
+
+    .spinnerWheel {
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%, -50%);
+    }
+
+    .notificationMessageWrapper {
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%, -50%);
+
+         .innerPropWrapper {
+              display: flex;
+              align-items: center;
+              font-size: 20px;
+
+              i {
+                   padding-top: 5px;
+               }
+
+              span {
+                   padding-left: 10px;
+              }
+         }
+    }
+
+
+    .gridGroup {
+         position: relative;
+
+         .gridGroupTitle {
+              font-weight: 500;
+              /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fefefe+0,ececec+100 */
+              background: #fefefe; /* Old browsers */
+              background: -moz-linear-gradient(top,  #fefefe 0%, #ececec 100%); /* FF3.6-15 */
+              background: -webkit-linear-gradient(top,  #fefefe 0%,#ececec 100%); /* Chrome10-25,Safari5.1-6 */
+              background: linear-gradient(to bottom,  #fefefe 0%,#ececec 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#ececec',GradientType=0 ); /* IE6-9 */
+              align-items: center !important;
+
+              .gridCell {
+                   padding: 0px !important;
+                   align-self: center !important;
+                   font-weight: 700;
+                   color: #666666;
+                   &.gridCollapseAdd {
+                        min-width: 40px !important;
+                        width: 40px;
+                        max-width: 40px;
+                   }
+              }
+         }
+         .gridGroupInner {
+             position: relative;
+         }
+         .gridCategory {
+              margin-left: 0px;
+
+              &.gridToDoList{
+                   margin-left: 80px;
+
+                   .gridParentTask {
+                        margin-left: 0px;
+                   }
+              }
+
+              .gridCategoryTitle {
+                   background-color: #f8f6f6;
+                   align-items: center;
+
+                   .gridCell {
+                        padding: 0px;
+                        align-self: center;
+                   }
+
+                   .gridCheckbox {
+                        background-color: #FFF;
+                        position: relative;
+                        &::after {
+                             content: '';
+                             background-color: #FFF;
+                             height: 1px;
+                             left: 0;
+                             right: 0;
+                             position: absolute;
+                             bottom: -1px;
+                        }
+                   }
+
+                   &.gridRowSelected {
+                        .gridCheckbox {
+                             background-color: #FFF;
+                        }
+                   }
+              }
+              .gridSubCategory {
+                   margin-left: 40px;
+
+                   .gridSubCategoryTitle {
+                        background-color: #f8f6f6;
+                        align-items: center;
+
+                        .gridCheckbox {
+                             background-color: #FFF;
+                             &::after {
+                                  content: '';
+                                  background-color: #FFF;
+                                  height: 1px;
+                                  left: 0;
+                                  right: 0;
+                                  position: absolute;
+                                  bottom: -1px;
+                             }
+                        }
+
+                        &.gridRowSelected {
+                             background-color: #eaeaea;
+                             .gridCheckbox {
+                                  background-color: #FFF;
+                             }
+                        }
+
+                        .gridCell {
+                             padding: 0px;
+                             align-self: center;
+                        }
+                   }
+                   .gridParentTask {
+                        margin-left: 40px !important;
+                   }
+              }
+              .gridParentTask {
+                   margin-left: 80px;
+
+                   .gridParentTaskInner {
+                        position: relative;
+                   }
+                   .gridSubTask {
+                        margin-left: 0px;
+                   }
+              }
+              .gridSubTask {
+                   margin-left: 80px;
+
+                   .gridSubTaskInner {
+                        position: relative;
+
+                        .gridSubtaskValue {
+                             display: flex;
+                             white-space: normal;
+                             overflow: hidden;
+
+                             i {
+                                  color: #000;
+                             }
+                             .gridSubtaskValueInner {
+                                  text-indent: 30px;
+                                  position: relative;
+                             }
+                        }
+                   }
+              }
+         }
+         .gridRow {
+              position: relative;
+              display: flex;
+              align-items: flex-start;
+              border-bottom: 1px solid #e6e6e7;
+              transition: all ease 0.3s;
+
+              &:hover {
+                   .gridMoveIcon {
+                        visibility: visible;
+                   }
+              }
+
+              &.gridRowSelected {
+                   background-color: rgb(234, 234, 234);
+                   border-color: #ffffff;
+
+                   &:hover {
+                        background-color: rgb(218, 218, 218);
+                   }
+                   .gridCheckboxInner {
+                        opacity: 1;
+                   }
+              }
+              &:hover {
+                   background-color: rgb(244,244,244);
+
+                   .gridCheckboxInner {
+                        opacity: 1;
+                   }
+              }
+              .gridCell {
+                   align-self: stretch;
+                   padding: 11px 8px 11px 12px;
+                   word-break: break-word;
+
+                   button:hover {
+                        color: inherit;
+                        background-color: transparent;
+                        border: none;
+                   }
+
+                   .gridOrderNumber {
+                        display: block;
+                        text-align: left;
+                   }
+                   .gridDocsCount, .gridCommentCount {
+                        display: flex;
+                        align-items: center;
+                        text-shadow: 1px 0 2px rgba(45, 125, 245, 0.5);
+                        margin: 0;
+                        width: 100%;
+
+                        i {
+                             padding-right: 4px;
+                        }
+                   }
+              }
+         }
+         .gridHeaderRow {
+              height: 32px;
+              align-items: center;
+              border-width: 2px;
+              border-bottom-color: #b5b5b5;
+              border-bottom-style: groove;
+              margin-left: 40px;
+
+              &:hover, &.gridRowSelected, &.gridRowSelected:hover {
+                   background-color: #FFF;
+              }
+
+              .gridCell {
+                   padding: 0px 8px 0px 12px;
+                   align-self: center;
+                   height: 32px;
+                   line-height: 32px;
+                   white-space: nowrap;
+                   overflow: hidden;
+
+                   * {
+                        max-height: 32px;
+                        cursor: default;
+                        padding: 0;
+                        margin: 0px;
+                        border: none;
+                        height: 32px;
+                        line-height: 32px;
+                        color: inherit;
+                   }
+
+                   button:hover {
+                        color: inherit;
+                        background-color: transparent;
+                        border: none;
+                   }
+
+                    i {
+                        padding: 0 0 0 4px;
+                        color: inherit;
+                        order: 2;
+                   }
+
+                   &.gridCollapseAdd {
+                        min-width: 40px !important;
+                        width: 40px;
+                        max-width: 40px;
+                   }
+
+                   &.gridCheckbox {
+                        min-height: 30px;
+                        max-height: 30px;
+                        margin-left: 40px;
+
+                        .gridCheckboxInner {
+                             height: 32px;
+
+                             input {
+                                  height: auto;
+                             }
+
+                             label {
+                                  cursor: default;
+                                  height: auto;
+
+                                  div {
+                                       margin: 0;
+                                       width: 18px;
+                                       height: 18px;
+                                       border: 1px solid rgb(102, 102, 102) !important;
+                                       border-radius: 50px;
+                                       i {
+                                            padding: 0px;
+                                            color: #FFF;
+                                       }
+                                  }
+                             }
+                        }
+                   }
+
+                   .gridHeaderIcon {
+                        display: flex;
+                        justify-content: center;
+
+                        i {
+                             padding: 0px;
+                        }
+                   }
+              }
+         }
+         .gridCheckbox {
+              width: 40px;
+              max-width: 40px;
+              min-width: 40px!important;
+              padding: 0 !important;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              min-height: 42px;
+              max-height: 42px;
+
+
+              .gridCheckboxInner {
+                   position: relative;
+                   width: 40px;
+                   height: 42px;
+                   display: flex;
+                   align-items: center;
+                   justify-content: center;
+                   opacity: 0;
+
+                   label {
+                        cursor: default;
+
+                        div {
+                             margin: 0;
+                             width: 18px;
+                             height: 18px;
+                             border-radius: 50px;
+                        }
+                   }
+              }
+         }
+         .gridCollapseAdd {
+              min-width: 80px !important;
+              width: 80px;
+              max-width: 80px;
+              padding: 0 !important;
+
+              .gridCollapse {
+                   width: 40px;
+                   height: 42px;
+                   display: inline-flex;
+                   font-size: 18px;
+                   color: #3292dc;
+                   cursor: pointer;
+                   align-items: center;
+                   justify-content: center;
+
+                   i {
+                        transition: all ease 0.5s;
+                   }
+              }
+              .gridAddTask {
+                   width: 40px;
+                   height: 42px;
+                   display: inline-flex;
+                   font-size: 18px;
+                   color: #3292dc;
+                   cursor: pointer;
+                   align-items: center;
+                   justify-content: center;
+              }
+         }
+         .gridDragMove {
+              display: flex;
+              align-items: start;
+              justify-content: center;
+              min-width: 40px !important;
+              width: 40px;
+              max-width: 40px;
+              padding: 0 !important;
+
+              .gridMoveIcon {
+                   width: 40px;
+                   height: 42px;
+                   display: inline-flex;
+                   font-size: 18px;
+                   color: #b5b5b5;
+                   cursor: pointer;
+                   align-items: center;
+                   justify-content: center;
+                   visibility: hidden;
+              }
+              .gridDragIcon {
+                   width: 40px;
+                   height: 40px;
+                   display: inline-flex;
+                   font-size: 18px;
+                   color: #3292dc;
+                   cursor: pointer;
+                   align-items: center;
+                   justify-content: center;
+              }
+         }
+         .gridResponsibleBGColor {
+              position: absolute;
+              left: 0px;
+              right: 0px;
+              top: 0px;
+              bottom: 0px;
+         }
+    }
+    .hideTask {
+         display: none;
+    }
+    .toggled i {
+         transform: rotate(-180deg);
+    }
+
+    .droppableContainer {
+         padding-bottom: 42px;
+         background: rgba(248, 246, 246, 0.62)!important;
+
+         &::after {
+              content: '' !important;
+              background: rgba(248, 246, 246, 0.62)!important;
+              position: absolute !important;
+              left: 0 !important;
+              right: 0 !important;
+              height: 40px !important;
+              bottom: 0 !important;
+         }
+    }
+}
+
+.maxRowWidth {
+    display: flex;
+}
+
+.setMaxWidth {
+    width: 100%;
+}

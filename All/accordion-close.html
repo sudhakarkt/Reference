@@ -1,0 +1,107 @@
+<!Doctype html>
+<html>
+<head>
+<title>Accordion</title>
+<link rel="icon" href="favicon.ico" />
+<link rel="stylesheet" type="text/css" media="screen" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<style>
+.accordion { padding: 0px; margin:0px; background-color: #f3f3f3; font-family: Calibri; margin-top: 15px; font-size: 15px; }
+.accordion li { list-style-type: none; border-bottom: 1px solid #FFF; }
+.accordion li a.ClicktoToggle { display: block; text-decoration: none; font-size: 17px; padding: 10px 50px 10px 10px; color: #000; position: relative; }
+.accordion-arrow { 
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 15px;
+    background-image: url(images/icon-accordion.png);
+    background-repeat:no-repeat;
+    background-position: right;
+    background-size: contain;
+    padding: 10px;
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg); /* IE 9 */
+    -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+    transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+ }
+.accordion li a.ClicktoToggle.activetoggle { background-color: #d6d6d6; }
+.accordion li a.ClicktoToggle.activetoggle .accordion-arrow { -ms-transform: rotate(-180deg); /* IE 9 */ -webkit-transform: rotate(-180deg); /* Chrome, Safari, Opera */ transform: rotate(-180deg); }
+.toggleDiv { display:none; background-color: #FFF; padding: 10px; border:1px solid #e4e4e4; }
+.toggleDiv h2 { margin-top: 0px; }
+</style>
+</head>
+
+<body>
+<ul id="Accordion" class="accordion">
+    <li>
+        <a href="javascript:void(0);" class="ClicktoToggle">What is Lorem Ipsum? <span class="accordion-arrow"></span></a>
+        <div class="toggleDiv">
+            <h2>What is Lorem Ipsum?</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+            <p> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+    </li>
+    <li>
+        <a href="javascript:void(0);" class="ClicktoToggle">Where does it come from? <span class="accordion-arrow"></span></a>
+        <div class="toggleDiv">
+            <h2>Where does it come from?</h2>
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
+            <p>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p><p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+        </div>
+    </li>
+    <li>
+        <a href="javascript:void(0);" class="ClicktoToggle">Why do we use it? <span class="accordion-arrow"></span></a>
+        <div class="toggleDiv">
+            <h2>What is Lorem Ipsum?</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+            <p> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+    </li>
+    <li>
+        <a href="javascript:void(0);" class="ClicktoToggle">Where can I get some? <span class="accordion-arrow"></span></a>
+        <div class="toggleDiv">
+            <h2>Where does it come from?</h2>
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
+            <p>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p><p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+        </div>
+    </li>
+    <li>
+        <a href="javascript:void(0);" class="ClicktoToggle">The standard Lorem Ipsum passage, used since the 1500s <span class="accordion-arrow"></span></a>
+        <div class="toggleDiv">
+            <h2>What is Lorem Ipsum?</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+            <p> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+    </li>
+    <li>
+        <a href="javascript:void(0);" class="ClicktoToggle">1914 translation by H. Rackham <span class="accordion-arrow"></span></a>
+        <div class="toggleDiv">
+            <h2>Where does it come from?</h2>
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
+            <p>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p><p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+        </div>
+    </li>
+</ul>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+    $(".ClicktoToggle").click(function () {
+        if($(this).hasClass('activetoggle'))
+        {
+            $(this).parent().children('.toggleDiv').slideToggle();
+            $(this).removeClass('activetoggle'); 
+        }
+        else {
+            $(".ClicktoToggle").removeClass('activetoggle');
+            $(".toggleDiv").slideUp();
+            $(this).parent().children('.toggleDiv').slideToggle();
+            $(this).addClass('activetoggle');    
+        }
+    });
+    $('.accordion li:first .ClicktoToggle').click();
+});
+</script>
+</body>

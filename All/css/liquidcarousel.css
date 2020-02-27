@@ -1,0 +1,18 @@
+.liquid .previous {
+	display:block;
+	height:91px;
+	width:30px;
+	background-image:url('../images/previous.png');
+	float:left;
+	margin:0;
+	padding:0;
+}
+.liquid .next {
+	display:block;
+	height:91px;
+	width:30px;
+	background-image:url('../images/next.png');
+	float:right;
+	margin:0;
+	padding:0;
+}

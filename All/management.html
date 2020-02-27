@@ -1,0 +1,92 @@
+<style>
+.cont{ width:1000px; margin:0 auto; font-family:sans-serif;}
+#teamContainer{ margin:0px; padding:0px; text-align:center;}
+#teamContainer li{ cursor:pointer;}
+.playr_detls{ display:inline-block; position:relative; margin-bottom:20px;}
+.playr_detls img{ width:200px;}
+.plyr_ovrly{ position:absolute; background-color:rgba(0, 0, 0, 0.4); bottom:0px; left:0px; right:0px;}
+.plyr_ovrly h3, .plyr_ovrly h5{ margin:0px 0px 5px; color:#fff; text-align:left; padding-left:10px;}
+.player_1, .player_2, .player_3, .player_4{ position:relative; overflow:hidden; width:855px; margin:10px auto; cursor:pointer; display:none;}
+.player_1 span, .player_2 span, .player_3 span, .player_4 span{ display:block; text-align:center;}
+span.text, .close{ color:#fff; text-transform:uppercase; position:absolute;}
+.player_1 span.text, .player_2 span.text, .player_3 span.text, .player_4 span.text{ top:20px; left:20px;}
+.close{right:5px; top:5px;}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#1").click(function(){
+		$(".player_2, .player_3, .player_4").hide();
+		$(".player_1").show();
+	});
+	$("#2").click(function(){
+		$(".player_1, .player_3, .player_4").hide();
+		$(".player_2").show();
+	});
+	$("#3").click(function(){
+		$(".player_1, .player_2, .player_4").hide();
+		$(".player_3").show();
+	});
+	$("#4").click(function(){
+		$(".player_1, .player_2, .player_3").hide();
+		$(".player_4").show();
+	});
+	$(".close").click(function(){
+	console.log("Clicked");
+	$(this).parent().hide();
+	});
+});
+</script>
+
+<div class="cont">
+	<ul id="teamContainer">
+		<li class="playr_detls" id="1">
+			<span><img src="images/sign_in.png" /></span>
+			<div class="plyr_ovrly">
+			<h3>Player Name</h3>
+			<h5>Position</h5>
+			</div>
+		</li>
+		<li class="playr_detls" id="2">
+			<span><img src="images/sign_in.png" /></span>
+			<div class="plyr_ovrly">
+			<h3>Player Name</h3>
+			<h5>Position</h5>
+			</div>
+		</li>
+		<li class="playr_detls" id="3">
+			<span><img src="images/sign_in.png" /></span>
+			<div class="plyr_ovrly">
+			<h3>Player Name</h3>
+			<h5>Position</h5>
+			</div>
+		</li>
+		<li class="playr_detls" id="4">
+			<span><img src="images/sign_in.png" /></span>
+			<div class="plyr_ovrly">
+			<h3>Player Name</h3>
+			<h5>Position</h5>
+			</div>
+		</li>
+	</ul>
+	<div class="player_1">
+	<span class="text">Player 1</span>
+	<span class="close"><img src="images/close_arrow.png" /></span>
+	<span><img src="images/youtube_player.png" /></span>
+	</div>
+	<div class="player_2">
+	<span class="text">Player 2</span>
+	<span class="close"><img src="images/close_arrow.png" /></span>
+	<span><img src="images/youtube_player.png" /></span>
+	</div>
+	<div class="player_3">
+	<span class="text">Player 3</span>
+	<span class="close"><img src="images/close_arrow.png" /></span>
+	<span><img src="images/youtube_player.png" /></span>
+	</div>
+	<div class="player_4">
+	<span class="text">Player 4</span>
+	<span class="close"><img src="images/close_arrow.png" /></span>
+	<span><img src="images/youtube_player.png" /></span>
+	</div>
+</div>

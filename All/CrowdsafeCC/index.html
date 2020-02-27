@@ -1,0 +1,92 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+<style>
+    .id-table {
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+        width: 340px;
+        height: 160px;
+        border: 1px solid #CCC;
+    }
+
+    .id-table td {
+        vertical-align: top;
+        padding: 5px;
+    }
+
+    .id-right-block {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .id-picture-container {
+        width: 120px;
+    }
+
+    .id-picture {
+        width: 100%;
+        height: 100%;
+        padding-bottom: 150px;
+        position: relative;
+        background-color: #d6d6d6;
+    }
+
+    .id-picture img {
+        display: block;
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        border: 1px solid #f3f1f1;
+    }
+
+    .id-staff-number, .id-agency-name {
+        margin-bottom: 10px;
+    }
+
+    .id-staff-number h6, .id-agency-name h6, .id-staff-name h6 {
+        font-size: 13px;
+        margin: 0px 0px 5px 0px;
+        text-transform: uppercase;
+    }
+
+    .id-staff-number p, .id-agency-name p, .id-staff-name p {
+        margin: 0px;
+    }
+
+</style>
+
+<table class="id-table">
+    <tr>
+        <td width="120">
+            <div class="id-picture-container">
+            <div class="id-picture">
+
+                <img src="http://www.planystech.com/wp-content/uploads/2017/03/profile-placeholder.jpg" />
+            </div>
+        </div>
+        </td>
+        <td>
+            <div class="id-right-block">
+                <div class="id-staff-number">
+                    <h6>Staff ID Number</h6>
+                    <p>05380105072</p>
+                </div>
+                <div class="id-agency-name">
+                    <h6>Agency</h6>
+                    <p>Crowd Safety Team</p>
+                </div>
+                <div class="id-staff-name">
+                    <h6>Name </h6>
+                    <p>Aiyampettai Arivudainambi Kaliyaperumal Chandran</p>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>

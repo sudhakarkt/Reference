@@ -1,0 +1,36 @@
+/*Drop Down CSS Starts*/
+body{ font-family: 'Open Sans', sans-serif; font-size:12px; padding: 0px 10px 10px 10px; background-color:#f1f1f1;}
+h1{ text-align:center;}
+.container{ width:1500px; margin:0px auto; padding:0 20px; background-color:#fff; overflow:hidden; position:relative;}
+a{ color:#313131; font-weight:bold; text-decoration:none;}
+a:hover{ color:#ff0000; text-decoration:none;}
+p{ margin:0 0 10px 0; line-height:25px;}
+/*Same Height DIV*/
+.EqHeightDiv{float:left; border:solid 1px #ccc; margin:0 10px 10px 0; padding:10px; width:31.05%;}
+.item{ border:solid 1px #ccc; clear:both; margin-bottom:15px; padding:10px; overflow:hidden; border-radius:10px;}
+.item:nth-child(odd){ background-color:#e4e4e4;}
+.item:nth-child(even){ background-color:#dcdcdc;}
+h3.remove{ cursor:pointer;}
+
+.share_print { margin:20px 0px; padding:0px; float:right;}
+.share_print li{ display:inline-block; position:relative; margin:0px 10px;}
+.share_print li:first-child{ margin-left:0px;} 
+.share_print li:last-child{ margin:0px;} 
+.share_print li a:hover{ text-decoration:none;}
+.share_print li a{ -webkit-transition: all 1.5s ease; -moz-transition: all 1.5s ease; transition: all 1.5s ease; text-decoration:none;}
+.sharesocial li a:hover{ text-decoration:none; -ms-transform: rotateX(360deg); /* IE 9 */ -webkit-transform: rotateX(360deg); /* Chrome, Safari, Opera */  transform: rotateX(360deg); -moz-transform: rotateX(360deg);}
+.sharesocial{ display:none; position:absolute; bottom:20px; left:0px; width:150px; background-color:#fff;}
+.sharesocial li{ margin:5px 0px; padding:2px 5px; display:block;}
+.sharesocial li a{ text-align:left; padding-left:20px; color:#013895; font-size:12px; font-weight:bold;}
+.sharesocial{ background-color:#fff; padding:10px 10px; border-top:1px solid rgba(32, 48, 140, 0.4); border-left:1px solid rgba(32, 48, 140, 0.4); border-radius:4px 4px 0px 0px;
+-webkit-box-shadow: 9px 9px 11px -7px rgba(0,0,0,0.69); -moz-box-shadow: 9px 9px 11px -7px rgba(0,0,0,0.69); box-shadow: 9px 9px 11px -7px rgba(0,0,0,0.69);}
+.fb_rt{background:url("../images/fb_icon.png") no-repeat center left;}
+.tw_rt{background:url("../images/twitter_icon.png") no-repeat left center;}
+.ln_rt{background:url("../images/linkedin_icon.png") no-repeat left center;}
+.gp_rt{background:url("../images/googleplus_icon.png") no-repeat left center;}
+/*Drop Down CSS Ends*/
+.fixed{ position:fixed; right:20px; top:10px;}
+.fixed ul li{ display:block; list-style-type:none; text-align:right; margin:5px 0px; padding:5px 0px;}
+
+
+

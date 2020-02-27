@@ -1,0 +1,55 @@
+
+<link rel="stylesheet" type="text/css" media="screen" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://raw.githubusercontent.com/t0m/select2-bootstrap-css/bootstrap3/select2-bootstrap.css">
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.8/select2.min.js"></script>
+
+<script>
+$(document).ready(function() {
+          
+  /* dropdown and filter select */
+  var select = $('#select2').select2();
+  
+  /* Select2 plugin as tagpicker */
+  $("#tagPicker").select2({
+    closeOnSelect:false
+  });
+
+});
+</script>
+                                           
+<div class="container-fluid">
+  <h3>Bootstrap Select2 Example</h3>
+</div>
+<hr>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+    	<h4>Bootstrap Select2</h4>
+      	<select class="form-control" id="select2">
+          <option value="1">Cats</option>
+          <option value="2">Dogs</option>
+          <option value="3">Fish</option>
+          <option value="4">Reptiles</option>
+          <option value="5">Equine</option>
+          <option value="6">Aviary</option>
+          <option value="7">Insects</option>
+        </select>
+    </div> 
+    <div class="col-md-6">
+    	<h4>Tag Picker</h4>
+      	<select class="form-control" id="tagPicker" multiple="multiple">
+          <option value="1">Cats</option>
+          <option value="2">Dogs</option>
+          <option selected="selected" value="3">Fish</option>
+          <option value="4">Reptiles</option>
+          <option selected="selected" value="5">Equine</option>
+          <option value="6">Aviary</option>
+          <option value="7">Insects</option>
+        </select>
+    </div> 
+  </div><!--/row-->
+  <hr>
+</div>

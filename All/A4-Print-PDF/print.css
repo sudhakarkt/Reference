@@ -1,0 +1,269 @@
+    *, ::after, ::before {
+        box-sizing: border-box;
+        font-family: Tahoma;
+    }
+
+    @page {
+        size: A4;
+        margin: 0;
+        page-break-after: always;
+    }
+
+    body {
+        margin: 0px !important;
+        padding: 0px !important;
+        background-color: #3c3c3c;
+    }
+
+    .pass-container.four {
+        background-color: red !important;
+    }
+
+    /*ADDED*/
+    .pass-wrapper {
+        width: 21cm;
+        margin: 0 auto;
+        /* display: flex;
+        flex-wrap: wrap; */
+        background-color: #888888;
+        overflow: hidden;
+    }
+
+    .agency-colon {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    #lblagency, #lblempcode {
+        display: block;
+        padding-left: 10px;
+    }
+    /*ADDED*/
+
+
+    .pass-container {
+        background-color: #FFF !important;
+        padding: 5px 5px;
+        font-size: 15px;
+        max-width: 10.0cm;
+        max-height: 14cm;
+        min-height: 14cm;
+        margin: 0.422cm 0.245cm;
+        border-radius: 4px;
+        float: left;
+    }
+
+    .pass-container:nth-child(even) {
+        float: right;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    .col, .col-md-8, .col-md-4 {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .col-md-8 {
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+
+    .col-md-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+
+    .pass-upload-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px dashed #e0e0e0;        
+        background-color: inherit;
+        height: 100px;
+    }
+
+    .pass-profile-details {
+        padding: 0px;
+        margin: 10px 0px;
+    }
+
+        .pass-profile-details p {
+            margin: 0 0 5px 0px;
+        }
+
+    .pass-profile-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #e0e0e0;
+        background-image: url('/images/man-placeholder.png');
+        background-position: center;
+        background-color: inherit;
+        height: 150px;
+    }
+
+    .pass-image-block {
+        padding-bottom: 5px;
+        border: 1px solid #e0e0e0;
+        margin-bottom: 15px;
+    }
+
+        .pass-image-block .pass-image-inner-block {
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid #e0e0e0;
+            padding-top: 5px;
+            height: 30px;
+            margin: 5px 0px;
+        }
+
+        .pass-image-block .pass-image-inner-block {
+            border: 1px solid #e0e0e0;
+            height: 30px;
+            margin: 10px 5px 5px 5px;
+            text-align: center;
+            width: 100%;
+        }
+
+    .pass-image-block-row {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .pass-image-block-col {
+        display: flex;
+        width: 18%;
+    }
+
+    .pass-code-block .pass-image-block-col {
+        width: 33.1%;
+        margin-top: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pass-image-block-col.pass-uplod-image {
+        border: 0px solid #e0e0e0;
+        min-height: 100px;
+        padding: 10px;
+    }
+
+    .pass-upload-image input, .pass-uplod-image input, .btn, .btnRowContainer {
+        display: none;
+    }
+
+    .pass-profile-details p {
+        display: table;
+        margin: 0;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+        .pass-profile-details p span {
+            display: table-cell;
+            vertical-align: top;
+        }
+
+            .pass-profile-details p span:first-child {
+                width: 75px;
+                padding-left: 2px;
+                white-space: nowrap;
+            }
+
+            .pass-profile-details p span:last-child {
+                padding-left: 5px;
+                width: 80px;
+                word-break: break-word;
+            }
+
+            .pass-profile-details p span:nth-child(2) {
+                width: 10px;
+            }
+
+    #headerText, #LogoText, #Hologram {
+        font-size: 0;
+   }
+
+    .passes-details {
+        height: 50px;
+        border: 1px solid #e0e0e0;
+        border-collapse: collapse;
+        font-size: 15px;
+        table-layout: fixed;
+        width: 100%;
+    }
+
+       .passes-details tr td {
+            padding: 5px;
+            vertical-align: top;
+        }
+
+            .passes-details tr td span {
+                position: relative;
+                display: block;
+            }
+
+    .label-holder {
+        position: absolute;
+        padding: 0px;
+        left: 0px;
+        font-style: normal;
+    }
+
+    .staffpasses-id {
+        width: 100%;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+        .staffpasses-id tr td {
+            width: 50%;
+            position: relative;
+        }
+
+            .staffpasses-id tr td:first-child {
+                text-align: right;
+            }
+
+
+
+    .hologram-qrcode-table {
+        width: 100%;
+        border: 1px solid #e0e0e0;
+        border-collapse: collapse;
+        table-layout: fixed;
+        margin-top: 10px;
+    }
+
+        .hologram-qrcode-table tr td {
+            width: 50%;
+            height: 75px;
+            text-align: center;
+        }
+
+    .pr-0, .px-0 {
+        padding-right: 0 !important;
+    }
+
+    .card-profile-image {
+        max-width: 38%;
+    }

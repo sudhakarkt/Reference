@@ -1,0 +1,78 @@
+<head>
+<style>
+body {
+    background-image: url(images/list-icon-plain.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height:100%;
+    background-size: cover;
+    margin: 0px;
+}
+
+.loaderoverlay {
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top:0px;
+    height: 100%;
+}
+
+.mainContentLoadingSpinnerHighlight, .mainContentLoadingSpinnerTrack {
+    width: 52px;
+    height: 52px;
+    border-radius: 52px;
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    top: 50%;
+    margin: -26px 0 0 -26px;
+}
+
+.mainContentLoadingSpinnerTrack {
+    border: 2px solid #FFF;
+    opacity: 0.2;
+}
+
+.mainContentLoadingSpinnerHighlight {
+    background: none;
+    border: 2px solid transparent;
+    border-left: 2px solid #FFF;
+    -webkit-animation: spin 0.8s linear infinite;
+    animation: spin 0.8s linear infinite;
+}
+
+@-webkit-keyframes spin{
+    to{
+        -webkit-transform:rotate(360deg);
+        transform:rotate(360deg)
+    }
+}
+
+@keyframes spin{
+    to{
+        -webkit-transform:rotate(360deg);
+        transform:rotate(360deg)
+    }
+}
+
+.loaderoverlay::after {
+    content:'';
+    background: url(images/loader2.gif);
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    top: 50%;
+    margin: -14px 0 0 -14px;
+}
+
+</style>
+</head>
+<body>
+<div class="loaderoverlay">
+    <div class="mainContentLoadingSpinnerTrack"></div>
+    <div class="mainContentLoadingSpinnerHighlight"></div>
+</div>
+</body>

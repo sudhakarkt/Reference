@@ -1,0 +1,208 @@
+<head>
+ <link rel="stylesheet" href="https://cdn.graph.office.net/prod/css/fabric-js/fabric.min.css">
+<link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/css/fabric.components.min.css" />
+<style>
+    *, :after, :before {
+        box-sizing: border-box;
+    }
+
+    .folderNav {
+        font-family: inherit;
+    }
+
+    .folderNav ul {
+       padding: 0;
+       margin: 0px;
+    }
+
+    .folderNav ul li {
+       list-style-type: none;
+       position: relative;
+       text-indent: 30px;
+       border-left: 3px solid transparent;
+    }
+
+    .folderNav ul li.active {
+        background-color: #f4f4f4;
+        border-left: 3px solid rgb(0,120,212);
+    }
+
+    .folderNav ul li a {
+       text-decoration: none;
+       color: #000;
+       display: block;
+       line-height: 36px;
+    }
+
+    .dropdownFolderIcon, .dropdownArrowIcon {
+        width: 20px;
+        height: 36px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transition: all ease 0.2s;
+        z-index: 10;
+    }
+
+    .dropdownFolderIcon i, .dropdownArrowIcon i {
+        text-indent: 0px;
+        transition: all ease 0.2s;
+        color: #000;
+    }
+
+    .dropdownArrowIcon {
+        color: #0078d7;
+        cursor: pointer;
+        position: absolute;
+        transition: all ease 0.5s;
+     }
+
+    .dropdownFolderIcon {
+      position: relative;
+      margin-right: 10px;
+    }
+
+    .first-level {
+        padding-left: 0px;
+    }
+
+    .second-level {
+        padding-left: 30px;
+    }
+
+    .third-level {
+        padding-left: 60px;
+    }
+
+    .fourth-level {
+        padding-left: 90px;
+    }
+
+    .fifth-level {
+        padding-left: 120px;
+    }
+    .second-level, .third-level, .fourth-level, .fifth-level {
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .turn {
+        transform: rotate(-180deg);
+    }
+
+    .show {
+        display: block;
+    }
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        /*Active*/
+        $('li a').click(function() {
+            $('li a').parent().removeClass('active');
+            $(this).parent().addClass('active');
+        });
+
+        /*Toggle*/
+        $(".dropdownArrowIcon").click(function() {
+            $(this).toggleClass('turn');
+
+            var stopClass = $(this).parent().attr("class").split(' ')[0];
+
+            if((!$(this).parent().hasClass('hidden')) && (!$(this).parent().hasClass('show')) )
+            {
+                $(this).parent().addClass('hidden');
+                $(this).parent().nextUntil('li.'+ stopClass).addClass('show');
+            }
+            else if((!$(this).parent().hasClass('hidden')) && ($(this).parent().hasClass('show')) ){
+                $(this).parent().addClass('hidden');
+                $(this).parent().nextUntil('li.'+ stopClass).removeClass('show');
+            }
+            else if(($(this).parent().hasClass('hidden')) && ($(this).parent().hasClass('show')) ){
+                $(this).parent().removeClass('hidden');
+                $(this).parent().nextUntil('li.'+ stopClass).removeClass('show');
+            }
+            else {
+                $(this).parent().nextUntil('li.'+ stopClass).removeClass('show');
+                $(this).parent().removeClass('hidden'); 
+            }
+
+            
+            //var stopClass = $(this).parent().attr("class").split(' ')[0];
+            //$(this).parent().nextUntil('li.'+ stopClass).slideToggle().addClass('show');
+            
+            //$(this).parent().nextUntil(stopClass, "li" );
+            //var selectedClass =  $(this).parent().next().attr('class');
+            //console.log($(this).nextUntil('li.'+ stopClass));
+            /*$(selectedClass).each(function() {
+                $(this).css('backgroundColor', 'yellow');
+                if ($(this).is('second-level')) {
+                  return false;
+                }
+            });*/
+
+        });
+
+
+    });
+</script>
+</head>
+<body class="ms-Fabric ms-font-m" dir="ltr">
+<div class="folderNav">
+    <ul>
+        <li class="first-level active"><a href="javascript:void(0);"><span class="dropdownFolderIcon"><i class="ms-Icon ms-Icon--OpenFolderHorizontal" aria-hidden="true"></i></span> First Level</a></li>
+        <li class="first-level root">
+            <span class="dropdownArrowIcon turn" title="Toggle"><i class="ms-Icon ms-Icon--ChevronDown" aria-hidden="true"></i></span>
+            <a href="javascript:void(0);"><span class="dropdownFolderIcon"><i class="ms-Icon ms-Icon--OpenFolderHorizontal" aria-hidden="true"></i></span> First Level Root</a></li>
+            <li class="second-level">
+                <a href="javascript:void(0);"><span class="dropdownFolderIcon"><i class="ms-Icon ms-Icon--OpenFolderHorizontal" aria-hidden="true"></i></span> Second Level</a></li>
+            <li class="second-level">
+                <a href="javascript:void(0);"><span class="dropdownFolderIcon"><i class="ms-Icon ms-Icon--OpenFolderHorizontal" aria-hidden="true"></i></span> Second Level</a></li>
+            <li class="second-level root">
+                    <span class="dropdownArrowIcon" title="Toggle"><i class="ms-Icon ms-Icon--ChevronDown" aria-hidden="true"></i></span>
+                    <a href="javascript:void(0);"><span class="dropdownFolderIcon"><i class="ms-Icon ms-Icon--OpenFolderHorizontal" aria-hidden="true"></i></span> Second Level Root</a></li>
+                <li class="third-level"><a href="javascript:void(0);"><span class="dropdownFolderIcon"><i class="ms-Icon ms-Icon--OpenFolderHorizontal" aria-hidden="true"></i></span> Third Level</a></li>
+                <li class="third-level"><a href="javascript:void(0);"><span class="dropdownFolderIcon"><i class="ms-Icon ms-Icon--OpenFolderHorizontal" aria-hidden="true"></i></span> Third Level</a></li>
+                <li class="third-level root">
+                     <span class="dropdownArrowIcon" title="Toggle"><i class="ms-Icon ms-Icon--ChevronDown" aria-hidden="true"></i></span>
+                    <a href="javascript:void(0);"><span class="dropdownFolderIcon"><i class="ms-Icon ms-Icon--OpenFolderHorizontal" aria-hidden="true"></i></span> Third Level Root</a></li>
+
+                <li class="fourth-level">
+                    <a href="javascript:void(0);"><span class="dropdownFolderIcon"><i class="ms-Icon ms-Icon--OpenFolderHorizontal" aria-hidden="true"></i></span> Fourth Level</a></li>
+                    <li class="fourth-level root">
+                    <span class="dropdownArrowIcon" title="Toggle"><i class="ms-Icon ms-Icon--ChevronDown" aria-hidden="true"></i></span>
+                    <a href="javascript:void(0);"><span class="dropdownFolderIcon"><i class="ms-Icon ms-Icon--OpenFolderHorizontal" aria-hidden="true"></i></span> Fourth Level Root</a></li>
+
+
+                    <li class="fifth-level">
+                    <a href="javascript:void(0);"><span class="dropdownFolderIcon"><i class="ms-Icon ms-Icon--OpenFolderHorizontal" aria-hidden="true"></i></span> Fifth Level</a></li>
+                    <li class="fifth-level">
+                    <a href="javascript:void(0);"><span class="dropdownFolderIcon"><i class="ms-Icon ms-Icon--OpenFolderHorizontal" aria-hidden="true"></i></span> Fifth Level</a></li>
+                    <li class="fifth-level">
+                    <a href="javascript:void(0);"><span class="dropdownFolderIcon"><i class="ms-Icon ms-Icon--OpenFolderHorizontal" aria-hidden="true"></i></span> Fifth Level</a></li>
+                    <li class="fifth-level">
+                    <a href="javascript:void(0);"><span class="dropdownFolderIcon"><i class="ms-Icon ms-Icon--OpenFolderHorizontal" aria-hidden="true"></i></span> Fifth Level</a></li>
+
+                    <li class="fourth-level">
+                    <a href="javascript:void(0);"><span class="dropdownFolderIcon"><i class="ms-Icon ms-Icon--OpenFolderHorizontal" aria-hidden="true"></i></span> Fourth Level</a></li>
+                    <li class="fourth-level">
+                    <a href="javascript:void(0);"><span class="dropdownFolderIcon"><i class="ms-Icon ms-Icon--OpenFolderHorizontal" aria-hidden="true"></i></span> Fourth Level</a></li>
+                    <li class="third-level">
+                    <a href="javascript:void(0);"><span class="dropdownFolderIcon"><i class="ms-Icon ms-Icon--OpenFolderHorizontal" aria-hidden="true"></i></span> Third Level</a></li>
+                    <li class="third-level">
+                    <a href="javascript:void(0);"><span class="dropdownFolderIcon"><i class="ms-Icon ms-Icon--OpenFolderHorizontal" aria-hidden="true"></i></span> Fourth Level</a></li>
+                <li class="second-level"><a href="javascript:void(0);"><span class="dropdownFolderIcon"><i class="ms-Icon ms-Icon--OpenFolderHorizontal" aria-hidden="true"></i></span> Second Level</a></li>
+                <li class="second-level"><a href="javascript:void(0);"><span class="dropdownFolderIcon"><i class="ms-Icon ms-Icon--OpenFolderHorizontal" aria-hidden="true"></i></span> Second Level</a></li>
+        <li class="first-level"><a href="javascript:void(0);"><span class="dropdownFolderIcon"><i class="ms-Icon ms-Icon--OpenFolderHorizontal" aria-hidden="true"></i></span> First Level</a></li>
+        <li class="first-level"><a href="javascript:void(0);"><span class="dropdownFolderIcon"><i class="ms-Icon ms-Icon--OpenFolderHorizontal" aria-hidden="true"></i></span> First Level</a></li>
+    </ul>
+</div>
+
+<script src="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/js/fabric.min.js"></script>
+
+</body>

@@ -1,0 +1,36 @@
+<head>
+<style>
+    body {
+        background-image: url(images/list-icon-plain.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height:100%;
+        background-size: cover;
+        margin: 0px;
+    }
+
+    .loaderoverlay {
+        background-color: rgba(256,256,256,0.85);
+        position: fixed;
+        left: 0px;
+        right: 0px;
+        top:0px;
+        height: 100%;
+    }
+
+    .loaderoverlay::after {
+        content:'';
+        background: url(images/loader2.gif);
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        display: inline-block;
+        left: 50%;
+        top: 50%;
+        margin: -16px 0 0 -16px;
+    }
+</style>
+</head>
+<body>
+<div class="loaderoverlay"></div>
+</body>

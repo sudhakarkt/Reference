@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="jQuery Liquid carousel plugin"/>
+	<title>jQuery Liquid Carousel plugin</title>
+	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.liquidcarousel.pack.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#liquid1').liquidcarousel({height:91, duration:2000, hidearrows:false});
+		});
+	</script>
+	<style>
+.liquid{ background-color:#950005; padding-top:20px; position:relative; width:100%; margin:0 auto;}
+.liquid ul{ text-align:center; padding:0px; margin:0px; background-color:rgb(214, 9, 41);}
+.liquid ul li{ display:inline-block; font-family:arial; height:87px;}
+.match_teams, .match_tim{ padding:9px 8px;}
+.liquid ul li div, .match_teams div{ display:table-cell; vertical-align:middle;}
+.liquid ul li div span{ display:block; text-transform:uppercase; padding-top:5px; padding-bottom:5px;}
+.match_tim{ background:url(images/black_seperator.png) no-repeat left center;}
+.match_tim span{ font-size:12px; color:#fff; text-transform:uppercase;}
+.match_teams{ background:url(images/black_seperator.png) no-repeat left center;}
+.match_teams div{ font-size:12px; color:#fff; font-size:10px; text-transform:uppercase;}
+.vs{ padding:0px 5px; font-size:12px; color:#fff; font-size:10px;}
+.team_detls span{ font-size:9px;}
+.prev_match, .next_match{ position:absolute; background-color:rgb(198, 0, 9); bottom:0px;}
+.liquid .previous, .liquid .next { display:block; height:91px; width:30px; margin:0; padding:0; cursor:pointer;}
+.liquid .previous{ background-image:url('images/previous.png'); float:left;}
+.liquid .next { background-image:url('images/next.png'); float:right;}
+
+</style>
+</head>
+<body>
+<div id="liquid1" class="liquid">
+	<span class="previous"></span>
+	<div class="wrapper">
+		<ul>
+			<li><div class="match_tim" style="background:none;"><span>March 07,<br/>2015</span></div>
+			<div class="match_teams">
+				<div class="team_detls">
+					<span><img src="images/team_1.png" alt="" /></span>
+					<span>Emirates</span>
+				</div>	
+				<div class="vs"><span>VS</span></div>
+				<div class="team_detls">
+					<span><img src="images/team_2.png" alt="" /></span>
+					<span>Al Dhafra</span>
+				</div>
+			</div>	</li>
+			<li><div class="match_tim"><span>March 08,<br/>2015</span></div>
+			<div class="match_teams">
+				<div class="team_detls">
+					<span><img src="images/team_3.png" alt="" /></span>
+					<span>Emirates</span>
+				</div>	
+				<div class="vs"><span>VS</span></div>
+				<div class="team_detls">
+					<span><img src="images/team_4.png" alt="" /></span>
+					<span>Al Dhafra</span>
+				</div>
+			</div>	</li>
+			<li><div class="match_tim"><span>March 09,<br/>2015</span></div>
+			<div class="match_teams">
+				<div class="team_detls">
+					<span><img src="images/team_1.png" alt="" /></span>
+					<span>Emirates</span>
+				</div>	
+				<div class="vs"><span>VS</span></div>
+				<div class="team_detls">
+					<span><img src="images/team_2.png" alt="" /></span>
+					<span>Al Dhafra</span>
+				</div>
+			</div>	</li>
+			<li><div class="match_tim"><span>March 10,<br/>2015</span></div>
+			<div class="match_teams">
+				<div class="team_detls">
+					<span><img src="images/team_3.png" alt="" /></span>
+					<span>Emirates</span>
+				</div>	
+				<div class="vs"><span>VS</span></div>
+				<div class="team_detls">
+					<span><img src="images/team_4.png" alt="" /></span>
+					<span>Al Dhafra</span>
+				</div>
+			</div>	</li>
+			<li><div class="match_tim"><span>March 11,<br/>2015</span></div>
+			<div class="match_teams">
+				<div class="team_detls">
+					<span><img src="images/team_1.png" alt="" /></span>
+					<span>Emirates</span>
+				</div>	
+				<div class="vs"><span>VS</span></div>
+				<div class="team_detls">
+					<span><img src="images/team_2.png" alt="" /></span>
+					<span>Al Dhafra</span>
+				</div>
+			</div>	</li>
+			<li><div class="match_tim"><span>March 12,<br/>2015</span></div>
+			<div class="match_teams">
+				<div class="team_detls">
+					<span><img src="images/team_3.png" alt="" /></span>
+					<span>Emirates</span>
+				</div>	
+				<div class="vs"><span>VS</span></div>
+				<div class="team_detls">
+					<span><img src="images/team_4.png" alt="" /></span>
+					<span>Al Dhafra</span>
+				</div>
+			</div>	</li>
+			<li><div class="match_tim"><span>March 13,<br/>2015</span></div>
+			<div class="match_teams">
+				<div class="team_detls">
+					<span><img src="images/team_1.png" alt="" /></span>
+					<span>Emirates</span>
+				</div>	
+				<div class="vs"><span>VS</span></div>
+				<div class="team_detls">
+					<span><img src="images/team_2.png" alt="" /></span>
+					<span>Al Dhafra</span>
+				</div>
+			</div>	</li>
+			<li><div class="match_tim"><span>March 14,<br/>2015</span></div>
+			<div class="match_teams">
+				<div class="team_detls">
+					<span><img src="images/team_3.png" alt="" /></span>
+					<span>Emirates</span>
+				</div>	
+				<div class="vs"><span>VS</span></div>
+				<div class="team_detls">
+					<span><img src="images/team_4.png" alt="" /></span>
+					<span>Al Dhafra</span>
+				</div>
+			</div>	</li>
+			
+		</ul>
+	</div>
+	<span class="next"></span>
+</div>
+</body>
+</html>

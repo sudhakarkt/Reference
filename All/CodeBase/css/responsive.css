@@ -1,0 +1,57 @@
+@media (max-width:768px) {
+    html {
+        font-size: 15px;
+    }
+    .action-buttons {
+        text-align: center;
+    }
+
+    .action-buttons .form-group {
+        margin-bottom: 0px;
+    }
+    .action-buttons .btn-group {
+        margin-left: 0px !important;
+        margin-bottom: 10px;
+    }
+    .radio-container {
+        min-width: 190px;
+    }
+    .left-side {
+        padding: 20px 20px;
+    }
+    .abs-event  {
+        position: relative;
+        transform: translateY(0px);
+        display: block;
+        margin: 10px 0px;
+        top: inherit;
+    }
+    .add-template {
+        margin: 1rem 0;
+    }
+}
+
+@media (min-width: 992px)
+{
+    .modal-lg {
+        max-width: 1200px;
+    }
+}
+
+@media only screen and (min-width:769px) and (max-width:1366px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width:1400px) and (max-width:1600px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1680px) {
+    html {
+        font-size: 17px;
+    }
+}

@@ -1,0 +1,88 @@
+<style>
+	.container { width: 1170px; margin:0px auto; font-family:verdana; font-size: 12px; }
+	.flex-row {
+		-webkit-box-orient: horizontal;
+	    -webkit-box-direction: normal;
+	    -webkit-flex-direction: row;
+	    flex-direction: row; 
+	    display: flex;
+	}
+	.flex-column { 
+		-webkit-box-flex: 1;
+	    -webkit-flex: 1;
+	    flex: 1;
+	    border:1px solid #DDD;
+	    margin: 15px;	
+	}
+	.flex-box {
+		padding: 15px;
+	}  
+</style>
+<div class="container">
+<div class="flex-row">
+	<div class="flex-column">
+		<div class="flex-box">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</p>
+		</div>
+	</div>
+	<div class="flex-column">
+		<div class="flex-box">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</p>
+		</div>
+	</div>
+	<div class="flex-column">
+		<div class="flex-box">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</p>
+		</div>
+	</div>
+</div>
+
+<h2>Parent Element (Container)</h2>
+<p>The parent element becomes flexible by setting the display property to <em>flex</em>:</p>
+<p>Flexbox properties for the parent element:</p>
+<ul style="font-size:16px;font-family:consolas,'Courier New', Courier, monospace">
+  <li><a href="#flex-direction">flex-direction</a></li>
+  <li><a href="#flex-wrap">flex-wrap</a></li>
+  <li><a href="#flex-flow">flex-flow</a></li>
+  <li><a href="#justify-content">justify-content</a></li>
+  <li><a href="#align-items">align-items</a></li>
+  <li><a href="#align-content">align-content</a></li>
+</ul>
+
+<h2>Child Elements (Items)</h2>
+<p>The direct child element(s) of a flexible container automatically becomes flexible items.</p>
+<p>Flexbox properties for the child elements:</p>
+<ul style="font-size:16px;font-family:consolas,'Courier New', Courier, monospace">
+  <li><a href="#order">order</a></li>
+  <li><a href="#flex-grow">flex-grow</a></li>
+  <li><a href="#flex-shrink">flex-shrink</a></li>
+  <li><a href="#flex-basis">flex-basis</a></li>
+  <li><a href="#flex">flex</a></li>
+  <li><a href="#align-self">align-self</a></li>
+</ul>
+
+
+<h2>flex-direction:</h2>
+<h4>Legal Values:</h4>
+<ul style="font-size:16px;font-family:consolas,'Courier New', Courier, monospace">
+  <li>column</li>
+  <li>column-reverse</li>
+  <li>row <span style="opacity:0.5;font-family:Verdana;font-size:15px;">(default)</span></li>
+  <li>row-reverse</li>
+</ul>
+
+<h2>flex-wrap:</h2>
+<h4>Legal Values:</h4>
+<ul style="font-size:16px;font-family:consolas,'Courier New', Courier, monospace">
+  <li>nowrap <span style="opacity:0.5;font-family:Verdana;font-size:15px;">(default)</span></li>
+  <li>wrap</li>
+  <li>wrap-reverse</li>
+</ul>
+</div>

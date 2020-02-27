@@ -1,0 +1,135 @@
+<!doctype HTML>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.css" />
+<style>
+    .container-fluid {
+        position: relative;
+    }
+    .col {
+        transition: all ease 0.5s;
+        cursor: pointer;
+        background-color: rgba(0,0,0,0.15);
+        border-right: 1px solid rgba(256,256,256,0.2);
+        border-bottom: 1px solid rgba(256,256,256,0.2);
+        min-height: 240px;
+    }
+    .col-content{
+        position: relative;
+        transition: all ease 0.5s;
+    }
+    .story-img {
+        background-image: url(images/cover-image-1.jpg);
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 0;
+        display: none;
+    }
+    .story-img.active{
+        display: block;
+        transform: scale(1);
+    }
+</style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="story-img" id="thumb1"></div>
+    <div class="story-img" id="thumb2"></div>
+    <div class="story-img" id="thumb3"></div>
+    <div class="story-img" id="thumb4"></div>
+    <div class="story-img" id="thumb5"></div>
+    <div class="story-img" id="thumb6"></div>
+    <div class="story-img" id="thumb7"></div>
+    <div class="story-img" id="thumb8"></div>
+    <div class="story-img" id="thumb9"></div>
+    <div class="story-img" id="thumb10"></div>
+    <div class="story-img" id="thumb11"></div>
+    <div class="story-img" id="thumb12"></div>
+    <div class="row">
+        <div class="col p-5" onmouseover="showanyproduct('onlynoneproduct')">
+            <div class="col-content">
+                Content part
+            </div>
+        </div>
+        <div class="col p-5" onmouseover="showanyproduct('onlynoneproduct')">
+            <div class="col-content">
+                Content part
+            </div>
+        </div>
+        <div class="col p-5" onmouseover="showanyproduct('onlynoneproduct')">
+            <div class="col-content">
+                Content part
+            </div>
+        </div>
+        <div class="col p-5" onmouseover="showanyproduct('onlynoneproduct')">
+            <div class="col-content">
+                Content part
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col p-5" onmouseover="showanyproduct('onlynoneproduct')">
+            <div class="col-content">
+                Content part
+            </div>
+        </div>
+        <div class="col p-5" onmouseover="showanyproduct('onlynoneproduct')">
+                <div class="col-content">
+                    Content part
+                </div>
+            </div>
+        <div class="col p-5" onmouseover="showanyproduct('onlynoneproduct')">
+            <div class="col-content">
+                Content part
+            </div>
+        </div>
+        <div class="col p-5" onmouseover="showanyproduct('onlynoneproduct')">
+            <div class="col-content">
+                Content part
+            </div>
+        </div>
+    </div>
+    <div class="row">
+            <div class="col p-5" onmouseover="showanyproduct('onlynoneproduct')">
+                <div class="col-content">
+                    Content part
+                </div>
+            </div>
+            <div class="col p-5" onmouseover="showanyproduct('onlynoneproduct')">
+                    <div class="col-content">
+                        Content part
+                    </div>
+                </div>
+            <div class="col p-5" onmouseover="showanyproduct('onlynoneproduct')">
+                <div class="col-content">
+                    Content part
+                </div>
+            </div>
+            <div class="col p-5" onmouseover="showanyproduct('onlynoneproduct')">
+                <div class="col-content">
+                    Content part
+                </div>
+            </div>
+        </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+function showanyproduct(onlynoneproduct) {
+    $('.story-img').each(function(index) {
+        debugger;
+        if ($(this).attr("id") == onlynoneproduct) {
+            console.log($(this).attr('id'));
+            $(this).stop().fadeIn();
+            $(this).addClass("active");
+        }
+        else {
+            $(this).stop().fadeOut();
+            $(this).removeClass("active");	
+        }
+    });
+};
+</script>
+</body>

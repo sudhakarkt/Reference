@@ -1,0 +1,294 @@
+<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+<link href="owl/owl.theme.css" type="text/css" rel="stylesheet"/>
+<link href="owl/owl.carousel.css" type="text/css" rel="stylesheet"/>
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="owl/owl.carousel.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<script>
+$(document).ready(function() {
+	$('#station_carousel').owlCarousel({
+		items: 8,
+             autoPlay: true,
+             slideSpeed: 1000,
+             navigationText: ["Prev", "Next"],
+             pagination: false,
+             navigation: true
+
+	 }); 
+     $(".srch_term_cont").mCustomScrollbar({
+          theme:"dark-3" 
+     });
+});
+</script>
+
+<style>
+body{ background-color: #cedde2; }
+.sidepading{ padding: 0px 50px;  }
+.station_carousel{ background-color: #9bccda; }
+#station_carousel h3{ border-bottom: 1px solid #FFF; margin:0px;}
+#station_carousel p{ margin:0px; }
+#station_carousel .item{ margin:10px 10px 10px 10px; color: #FFF; background-color:#812b82; padding: 10px;}
+#station_carousel .item.user{ background-color:#106a84;}
+#station_carousel .owl-controls{ margin:0px; }
+#station_carousel .owl-prev, .owl-next{ position: absolute; top: 35px;} 
+#station_carousel .owl-prev{ left: -40px;} 
+#station_carousel .owl-next{ right: -40px;} 
+.search_statn{ margin-bottom: 15px; padding-top: 10px; }
+.search_statn .form-control, .search_statn .btn{ height: 35px; }
+.hitlabel{ font-size: 20px; display: table; padding: 0px !important; }
+.hitlabel span{ display: table-cell; vertical-align: middle; height: 30px; font-weight: normal; cursor: pointer; }
+.hitlabel span:last-child{ padding-left:20px; }
+.searchhintxt{ margin-bottom: 0px; }
+.serchhead{ display: table; background-color: #eef3f6; border-bottom: 1px solid #CCC; width: 100%; padding: 10px; margin-top: 15px; }
+.serarch_restitle{ float: left; margin:0px; padding-left: 10px; }
+.search_play_save{ float: right; display: table; margin-bottom: 0px; }
+.search_play_save li{ display: table-cell; vertical-align: middle; }
+.search_play_save li a{ padding-left: 30px; font-size: 20px; color: #000; }
+.srch_playall{ background: url(../../); }
+.srch_term_reslts{ display: table; padding: 10px; width: 100%; background-color: #eef3f6; margin-bottom: 0px; }
+.srch_term_reslts li{ display: table-cell; vertical-align: middle;}
+.srch_term_reslts h3{ margin:0px; }
+.srch_term_desn{ padding-left: 30px; position: relative; }
+.srch_term_desn p{ margin-bottom: 0px; }
+.srch_term_desn span{ font-style: italic; }
+.srchcount { position: absolute; top: -4; left: 5px; font-style: normal !important; font-size: 24px;}
+.srch_term_ctrls{ float: right; display: table; margin-bottom: 0px; padding: 0px; width: 150px; }
+.srch_term_ctrls li a{ width: 50px; text-align: center; }
+.srch_term_ctrls li{ text-align: center; }
+</style>
+
+<div class="container-fluid">
+     <div class="row station_carousel sidepading">
+          <div id="station_carousel" class="owl-carousel">
+               <div class="item">
+                    <h3>A. R. Rahman</h3>
+                    <p>Station, Names, Loren ipsdum</p>
+               </div>
+               <div class="item">
+                    <h3>A. R. Rahman</h3>
+                    <p>Station, Names, Loren ipsdum</p>
+               </div>
+               <div class="item">
+                    <h3>A. R. Rahman</h3>
+                    <p>Station, Names, Loren ipsdum</p>
+               </div>
+               <div class="item">
+                    <h3>A. R. Rahman</h3>
+                    <p>Station, Names, Loren ipsdum</p>
+               </div>
+               <div class="item">
+                    <h3>A. R. Rahman</h3>
+                    <p>Station, Names, Loren ipsdum</p>
+               </div>
+               <div class="item">
+                    <h3>A. R. Rahman</h3>
+                    <p>Station, Names, Loren ipsdum</p>
+               </div>
+               <div class="item user">
+                    <h3>A. R. Rahman</h3>
+                    <p>Station, Names, Loren ipsdum</p>
+               </div>
+               <div class="item user">
+                    <h3>A. R. Rahman</h3>
+                    <p>Station, Names, Loren ipsdum</p>
+               </div>
+               <div class="item user">
+                    <h3>A. R. Rahman</h3>
+                    <p>Station, Names, Loren ipsdum</p>
+               </div>
+               <div class="item user">
+                    <h3>A. R. Rahman</h3>
+                    <p>Station, Names, Loren ipsdum</p>
+               </div>
+          </div>
+     </div>
+</div>     
+<div class="container-fluid sidepading">
+     <div class="row search_statn">
+          <div class="col-md-10">
+               <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+                    <div class="input-group-btn">
+                         <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+               </div>
+          </div>
+          <div class="col-md-2 ">
+              <label class="hitlabel" for="srchhits"><span><input type="checkbox" id="srchhits"></span><span>Hit Songs Only</span></label>
+          </div>  
+     </div> 
+     
+     <p class="searchhintxt">A. R. Rahman, 90 will play all songs from 1990 to 1999 composed by A. R. Rahman,</p>
+     <p class="searchhintxt">Ilayaraja, Manirathnam, 1990, 1991 will play all songs composed by ilayaraja and directed by Manirathnam in 1990 and 1991</p>
+     <div class="serchhead">
+          <h3 class="serarch_restitle">AR Rahman</h3>
+          <ul class="search_play_save">
+               <li><a href="#" class="srch_playall">Play All</a></li>
+               <li><a href="#" class="srch_savestation">Save Station</a></li>
+          </ul>
+     </div>
+     <div class="srch_term_cont">
+          <ul class="srch_term_reslts">
+               <li>
+                    <div class="srch_term_desn">
+                         <span class="srchcount">1.</span>
+                         <h3>Mental Manadhil (M) - O Kadhal Kanmani</h3>
+                         <p><span>Singer:</span> A. R. Rahman</p>
+                         <p><span>Lyricist:</span> A. R. Rahman</p>
+                    </div>
+               </li>
+               <li>
+                    <ul class="srch_term_ctrls">
+                         <li><a href="#">Play</a></li>
+                         <li><a href="#">Add</a></li>
+                    </ul>
+               </li>          
+          </ul>
+          <ul class="srch_term_reslts">
+               <li>
+                    <div class="srch_term_desn">
+                         <span class="srchcount">1.</span>
+                         <h3>Mental Manadhil (M) - O Kadhal Kanmani</h3>
+                         <p><span>Singer:</span> A. R. Rahman</p>
+                         <p><span>Lyricist:</span> A. R. Rahman</p>
+                    </div>
+               </li>
+               <li>
+                    <ul class="srch_term_ctrls">
+                         <li><a href="#">Play</a></li>
+                         <li><a href="#">Add</a></li>
+                    </ul>
+               </li>          
+          </ul>
+          <ul class="srch_term_reslts">
+               <li>
+                    <div class="srch_term_desn">
+                         <span class="srchcount">1.</span>
+                         <h3>Mental Manadhil (M) - O Kadhal Kanmani</h3>
+                         <p><span>Singer:</span> A. R. Rahman</p>
+                         <p><span>Lyricist:</span> A. R. Rahman</p>
+                    </div>
+               </li>
+               <li>
+                    <ul class="srch_term_ctrls">
+                         <li><a href="#">Play</a></li>
+                         <li><a href="#">Add</a></li>
+                    </ul>
+               </li>          
+          </ul>
+          <ul class="srch_term_reslts">
+               <li>
+                    <div class="srch_term_desn">
+                         <span class="srchcount">1.</span>
+                         <h3>Mental Manadhil (M) - O Kadhal Kanmani</h3>
+                         <p><span>Singer:</span> A. R. Rahman</p>
+                         <p><span>Lyricist:</span> A. R. Rahman</p>
+                    </div>
+               </li>
+               <li>
+                    <ul class="srch_term_ctrls">
+                         <li><a href="#">Play</a></li>
+                         <li><a href="#">Add</a></li>
+                    </ul>
+               </li>          
+          </ul>
+          <ul class="srch_term_reslts">
+               <li>
+                    <div class="srch_term_desn">
+                         <span class="srchcount">1.</span>
+                         <h3>Mental Manadhil (M) - O Kadhal Kanmani</h3>
+                         <p><span>Singer:</span> A. R. Rahman</p>
+                         <p><span>Lyricist:</span> A. R. Rahman</p>
+                    </div>
+               </li>
+               <li>
+                    <ul class="srch_term_ctrls">
+                         <li><a href="#">Play</a></li>
+                         <li><a href="#">Add</a></li>
+                    </ul>
+               </li>          
+          </ul>
+          <ul class="srch_term_reslts">
+               <li>
+                    <div class="srch_term_desn">
+                         <span class="srchcount">1.</span>
+                         <h3>Mental Manadhil (M) - O Kadhal Kanmani</h3>
+                         <p><span>Singer:</span> A. R. Rahman</p>
+                         <p><span>Lyricist:</span> A. R. Rahman</p>
+                    </div>
+               </li>
+               <li>
+                    <ul class="srch_term_ctrls">
+                         <li><a href="#">Play</a></li>
+                         <li><a href="#">Add</a></li>
+                    </ul>
+               </li>          
+          </ul>
+          <ul class="srch_term_reslts">
+               <li>
+                    <div class="srch_term_desn">
+                         <span class="srchcount">1.</span>
+                         <h3>Mental Manadhil (M) - O Kadhal Kanmani</h3>
+                         <p><span>Singer:</span> A. R. Rahman</p>
+                         <p><span>Lyricist:</span> A. R. Rahman</p>
+                    </div>
+               </li>
+               <li>
+                    <ul class="srch_term_ctrls">
+                         <li><a href="#">Play</a></li>
+                         <li><a href="#">Add</a></li>
+                    </ul>
+               </li>          
+          </ul>
+          <ul class="srch_term_reslts">
+               <li>
+                    <div class="srch_term_desn">
+                         <span class="srchcount">1.</span>
+                         <h3>Mental Manadhil (M) - O Kadhal Kanmani</h3>
+                         <p><span>Singer:</span> A. R. Rahman</p>
+                         <p><span>Lyricist:</span> A. R. Rahman</p>
+                    </div>
+               </li>
+               <li>
+                    <ul class="srch_term_ctrls">
+                         <li><a href="#">Play</a></li>
+                         <li><a href="#">Add</a></li>
+                    </ul>
+               </li>          
+          </ul>
+          <ul class="srch_term_reslts">
+               <li>
+                    <div class="srch_term_desn">
+                         <span class="srchcount">1.</span>
+                         <h3>Mental Manadhil (M) - O Kadhal Kanmani</h3>
+                         <p><span>Singer:</span> A. R. Rahman</p>
+                         <p><span>Lyricist:</span> A. R. Rahman</p>
+                    </div>
+               </li>
+               <li>
+                    <ul class="srch_term_ctrls">
+                         <li><a href="#">Play</a></li>
+                         <li><a href="#">Add</a></li>
+                    </ul>
+               </li>          
+          </ul>
+          <ul class="srch_term_reslts">
+               <li>
+                    <div class="srch_term_desn">
+                         <span class="srchcount">1.</span>
+                         <h3>Mental Manadhil (M) - O Kadhal Kanmani</h3>
+                         <p><span>Singer:</span> A. R. Rahman</p>
+                         <p><span>Lyricist:</span> A. R. Rahman</p>
+                    </div>
+               </li>
+               <li>
+                    <ul class="srch_term_ctrls">
+                         <li><a href="#">Play</a></li>
+                         <li><a href="#">Add</a></li>
+                    </ul>
+               </li>          
+          </ul>
+     </div>
+</div>     

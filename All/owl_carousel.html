@@ -1,0 +1,39 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
+<link href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css" type="text/css" rel="stylesheet"/>
+<link href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css" type="text/css" rel="stylesheet"/>
+<script>
+$(document).ready(function() {
+	$('#owl-demo1').owlCarousel({
+		items: 1,
+             autoPlay: true,
+             slideSpeed: 1000,
+             navText: ["Prev", "Next"],
+             info: true,
+             nav: true,
+             loop: true
+
+	 });  
+});
+</script>
+<style>
+.cont{ width:900px; margin:0 auto;}
+#owl-demo1 .item{
+  margin: 3px;
+}
+
+</style>
+<div class="cont">
+  <div id="owl-demo1" class="owl-carousel">
+    <div class="item"><img src="images/sign_in.png" alt="Lazy Owl Image"></div>
+    <div class="item"><img src="images/sign_in_hover.png" alt="Lazy Owl Image"></div>
+    <div class="item"><img src="images/sign_in.png" alt="Lazy Owl Image"></div>
+    <div class="item"><img src="images/sign_in_hover.png" alt="Lazy Owl Image"></div>
+    <div class="item"><img src="images/sign_in.png" alt="Lazy Owl Image"></div>
+    <div class="item"><img src="images/sign_in_hover.png" alt="Lazy Owl Image"></div>
+    <div class="item"><img src="images/sign_in.png" alt="Lazy Owl Image"></div>
+    <div class="item"><img src="images/sign_in_hover.png" alt="Lazy Owl Image"></div>
+    <div class="item"><img src="images/sign_in.png" alt="Lazy Owl Image"></div>
+    <div class="item"><img src="images/sign_in_hover.png" alt="Lazy Owl Image"></div>
+  </div>
+</div>

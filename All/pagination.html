@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>A Simple Pagination jQuery Tutorial by Arunkumar Gudelli</title>
+    
+    <script src="js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="js/jPages.min.js" type="text/javascript"></script>
+	<script src="js/Pagination.js" type="text/javascript"></script>
+	
+	<link href="css/pagination.css" rel="stylesheet" type="text/css" />
+	<script>
+	$(document).ready(function()
+	{
+		$('.jp-previous').html('');
+		$('.jp-next').html('');
+		
+	});
+	</script>
+	<style>
+	.jp-previous{padding:7px; background:url(left.png) no-repeat center center !important;}
+	.jp-next{ padding:7px; background:url(right.png) no-repeat center center !important;}
+	.jp-previous.jp-disabled{ background:url(left_disabled.png) no-repeat center center !important;}
+	.jp-next.jp-disabled{ background:url(right_disabled.png) no-repeat center center !important;}
+	</style>
+    </head>
+<body>
+
+<ul id="itemContainer">
+            <li>test1</li>
+            <li>test2</li>
+            <li>test3</li>
+            <li>test4</li>
+            <li>test5</li>
+            <li>test6</li>
+            <li>test7</li>
+			<li>test1</li>
+            <li>test2</li>
+            <li>test3</li>
+            <li>test4</li>
+            <li>test5</li>
+            <li>test6</li>
+            <li>test7</li>
+			<li>test1</li>
+            <li>test2</li>
+            <li>test3</li>
+            <li>test4</li>
+            <li>test5</li>
+            <li>test6</li>
+            <li>test7</li>
+			<li>test1</li>
+            <li>test2</li>
+            <li>test3</li>
+            <li>test4</li>
+            <li>test5</li>
+            <li>test6</li>
+            <li>test7</li>
+			</ul>
+			 <div class="holder">
+        </div>
+			</body>
+			</html>
