@@ -3,248 +3,354 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Mastering React</title>
+    <style>
+
+        body {
+            margin: 15px 15px 0px 15px;
+        }
+        
+        header {
+            min-height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #eaeaea;
+            text-transform: uppercase;
+            margin: -15px -15px 0px -15px ;
+        }
+
+        section {
+            height: calc(100vh - 10vh);
+            overflow: auto;
+        }
+
+        h1 {
+            font-weight: 300;
+        }
+       
+        h5 {
+            margin: 15px 0 10px 0;
+        }
+        ul {
+            margin: 0px;
+            padding: 0px;
+        }
+        ul li {
+            list-style-type: none;
+            padding: 0px;
+            cursor: pointer;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #565656;
+        }
+
+        video {
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        a {
+            display: block;
+            padding: 3px 10px;
+        }
+
+        li.active {
+            background-color: #E3E3E3;
+        }
+    </style>
 </head>
 <body>
-    Getting Started (00:28)
-    1- What is React (4:32)
-    2- Setting Up the Development Environment (3:37)
-    3- Your First React App (6:33)
-    4- Hello World (5:25)
-    5- Custom Configs (3:11)
-    6- Full-stack Architecture (2:44)
-    7- Course Structure (2:24)
-    Redux?
-   
-   ES6 Refresher (00:48)
-    1- Introduction (1:43)
-    2- Let vs Var vs Const (3:52)
-    3- Objects (2:45)
-    4- The this Keyword (2:49)
-    5- Binding this (2:36)
-    6- Arrow Functions (4:15)
-    7- Arrow Functions and this (4:14)
-    8- Array.map Method (3:36)
-    9- Object Destructuring (2:29)
-    10- Spread Operator (4:02)
-    11- Classes (3:45)
-    12- Inheritance (4:03)
-    13- Modules (4:11)
-    14- Named and Default Exports (5:15)
-   
-   Components (01:17)
-    1- Introduction (1:38)
-    2- Setting Up the Project (2:06)
-    3- Your First React Component (5:20)
-    4- Specifying Children (4:16)
-    5- Embedding Expressions (4:50)
-    6- Setting Attributes (5:45)
-    7- Rendering Classes Dynamically (4:18)
-    8 - Rendering Lists (3:58)
-    9- Conditional Rendering (6:04)
-    10- Handling Events (2:49)
-    11- Binding Event Handlers (4:36)
-    12- Updating the State (2:14)
-    13- What Happens When State Changes (2:04)
-    14- Passing Event Arguments (3:04)
-    15- Setting Up the Vidly Project (5:38)
-    16- Exercises (3:25)
-    17- Building the Movies Component (7:18)
-    18- Deleting a Movie (5:18)
-    19- Conditional Rendering (3:26)
-    20 - Summary (0:36)
-   
-    Composing Components (01:19)
-    1- Introduction (0:45)
-    2- Composing Components (3:45)
-    3- Passing Data to Components (3:11)
-    4- Passing Children (3:10)
-    5 - Debugging React Apps (4:09)
-    6- Props vs State (2:24)
-    7 - Raising and Handling Events (4:52)
-    8- Updating the State (4:38)
-    9- Single Source of Truth (3:55)
-    10- Removing the Local State (6:47)
-    11- Multiple Components in Sync (5:53)
-    12- Lifting the State Up (5:36)
-    13 - Stateless Functional Components (2:29)
-    14- Destructuring Arguments (2:00)
-    15 - Lifecycle Hooks (1:38)
-    16 - Mounting Phase (5:34)
-    17- Updating Phase (4:20)
-    18- Unmounting Phase (1:26)
-    19- Exercise- Decrement Button (1:05)
-    20- Solution - Decrement Button (4:53)
-    21- Exercise- Like Component (1:44)
-    22- Solution- Like Component (12:26)
-    23- Summary (0:42)
-   
-   Pagination, Filtering, and Sorting (01:47)
-    1- Introduction (1:08)
-    2- Exercise- Pagination Component (1:01)
-    3- Pagination- Component Interface (3:47)
-    4- Pagination- Displaying Pages (6:48)
-    5- Pagination- Handling Page Changes (5:49)
-    6- Pagination- Paginating Data (6:14)
-    7- Pagination- Type Checking with PropTypes (4:56)
-    8- Exercise- ListGroup Component (1:24)
-    9- Filtering- Component Interface (5:32)
-    10- Filtering- Displaying Items (3:57)
-    11- Filtering- Default Props (2:06)
-    12- Filtering- Handling Selection (4:20)
-    13- Filtering- Implementing Filtering (2:59)
-    14- Filtering- Adding All Genres (3:39)
-    15- Sorting- Extracting MoviesTable (5:19)
-    16- Sorting- Raising the Sort Event (3:28)
-    17- Sorting- Implementing Sorting (5:13)
-    18- Sorting- Moving Responsibility (5:15)
-    19- Sorting- Extracting TableHeader (7:44)
-    20- Sorting- Extracting TableBody (3:12)
-    21- Sorting- Rendering Cell Content (8:02)
-    22- Sorting- Unique Keys - Final (2:58)
-    23- Sorting- Adding the Sort Icon (3:57)
-    24- Sorting- Extracting Table (3:51)
-    25- Sorting- Extracting a Method (3:18)
-    26- Destructuring Arguments (0:58)
-    27- Summary (0:51)
-    Start A Quick Note
-   
-   Routing (00:53)
-    1- Introduction (0:33)
-    2- Setup (1:46)
-    3- Adding Routing (4:15)
-    4- Switch (2:26)
-    5- Link (4:20)
-    6- Route Props (2:10)
-    7- Passing Props (2:35)
-    8- Route Parameters (3:32)
-    9- Optional Parameters (2:06)
-    10- Query String Parameters (3:51)
-    11- Redirects (3:06)
-    12- Programmatic Navigation (2:20)
-    13- Nested Routing (4:35)
-    14- Exercises- NavBar and Routing (1:43)
-    15- Adding React Router (1:26)
-    16- Adding Routes (4:57)
-    17- Adding the NavBar (4:39)
-    18- Linking to the MovieForm (4:42)
-    19 - Summary (0:31)
-   
-   Forms (01:34)
-    1- Introduction (0:38)
-    2- Building a Bootstrap Form (5:34)
-    3- Handling Form Submission (2:00)
-    4- Refs (3:58)
-    5- Controlled Elements (4:32)
-    6- Handling Multiple Inputs (2:49)
-    7- Common Errors (2:28)
-    8- Extracting a Reusable Input (3:57)
-    9- Validation (2:56)
-    10- A Basic Validation Implementation (3:11)
-    11- Displaying Validation Errors (3:42)
-    12- Validation on Change (4:19)
-    13- Joi (4:33)
-    14- Validating a Form Using Joi (4:43)
-    15- Validating a Field Using Joi (5:22)
-    16- Disabling the Submit Button (1:11)
-    17- Code Review (3:13)
-    18- Extracting a Reusable Form (4:51)
-    19- Extracting Helper Rendering Methods (8:18)
-    20- Register Form (1:42)
-    21- Code Review (1:10)
-    22- Exercise 2- Movie Form (3:18)
-    23- Code Review (8:24)
-    24- Exercise 3- Search Movies (1:22)
-    25- Code Review (5:12)
-   
-   Calling Backend Services (01:42)
-    1- Introduction (1:13)
-    2- JSON Placeholder (2:54)
-    3- Http Clients (2:56)
-    4- Getting Data (5:26)
-    5- Creating Data (4:52)
-    6- Lifecycle of a Request (2:50)
-    7- Updating Data (4:14)
-    8- Deleting Data (1:35)
-    9- Optimistic vs Pessimistic Updates (4:24)
-    10- Expected vs Unexpected Errors (6:40)
-    11- Handling Unexpected Errors Globally (7:54)
-    12- Extracting a Reusable Http Service (3:43)
-    13- Extracting a Config Module (1:36)
-    14- Displaying Toast Notifications (2:56)
-    15- Logging Errors (5:47)
-    16- Extracting a Logger Service (4:25)
-    17- Vidly Backend (1:50)
-    18- Installing MongoDB on Mac (3:58)
-    19- Installing MongoDB on Windows (5:39)
-    20- Setting Up the Node Backend (2:44)
-    21- Disabling Authentication (4:01)
-    22- Exercise- Connect Movies Page to the Backend (1:56)
-    23- Adding Http and Log Services (2:38)
-    24- Replacing FakeGenreService (3:23)
-    25- Replacing FakeMovieService (5:48)
-    26- Extracting a Config File (1:54)
-    27- Exercise- Connect Movie Form to the Backend (0:56)
-    28- Populating the Form (3:45)
-    29- Refactoring (2:30)
-    30- Saving the Movie (2:40)
-    31- Refactoring (2:36)
-   
-   Authentication and Authorization (01:41)
-    1 - Introduction (0:49)
-    2- Registering a New User (2:37)
-    3- Submitting the Registration Form (4:30)
-    4- Handling Registration Errors (1:58)
-    5- Logging in a User (1:43)
-    6- Submitting the Login Form (2:23)
-    7- Handling Login Errors (1:51)
-    8- Storing the JWT (3:04)
-    9- Logging in the User upon Registration (5:37)
-    10- JSON Web Tokens (JWT) (3:59)
-    11- Getting the Current User (4:18)
-    12- Displaying the Current User on NavBar (4:48)
-    13- Logging out a User (2:44)
-    14- Refactoring (10:03)
-    15- Calling Protected API Endpoints (4:10)
-    16- Fixing Bi-directional Dependencies (2:43)
-    17- Authorization (6:30)
-    18- Showing or Hiding Elements based on the User (2:40)
-    19- Protecting Routes (2:50)
-    20- Extracting ProtectedRoute (5:55)
-    21- Redirecting after Login (5:40)
-    22- Exercise (0:19)
-    23- Hiding the Delete Column (4:19)
-   
-   Deployment (00:35)
-    1- Introduction (0:38)
-    2- Environment Variables (4:58)
-    3- Production Builds (2:48)
-    4- Getting ed with Heroku (2:06)
-    5- MongoDB in the Cloud (2:35)
-    6- Adding Code to a Git Repository (3:05)
-    7- Deploying to Heroku (3:01)
-    8- Viewing Logs (2:40)
-    9- Setting Environment Variables on Heroku (4:37)
-    10- Preparing the Font-end for Deployment (4:09)
-    11- Deploying the Front-end (2:38)
-   
-   Advanced Topics (01:04)
-    1- Introduction (0:31)
-    2- Source Code
-    3- Setting Up the Development Environment (3:13)
-    4- Higher Order Components (2:04)
-    5- Implementing a Higher Order Component (8:35)
-    6- Hooks (3:06)
-    7- The useState Hook (8:30)
-    8- The useEffect Hook (5:46)
-    9- Custom Hooks (3:04)
-    10- Fetching Data with Hooks (4:37)
-    11- Context (2:10)
-    12- Context in Class Components (9:46)
-    13- Context in Functional Components (3:33)
-    14- Updating the Context (7:06)
-    15- Consuming Multiple Contexts (2:24)
-    16- Thank You!
-    17- What to Learn Next   
+
+<header>
+    <h1>Mastering React</h1>
+</header>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col" style="width: 400px; max-width: 400px;">
+            <section>
+                <h5>GETTTING STARTED (00:28)</h5>
+                <ul>
+                    <li class="active"><a data-url="F:/Mastering React/01 Getting Started/01 What is React.mp4">01 What is React (4:32)</a></li>
+                    <li><a data-url="F:/Mastering React/01 Getting Started/02 Setting Up the Development Environment.mp4">02 Setting Up the Development Environment (3:37)</a></li>
+                    <li><a data-url="F:/Mastering React/01 Getting Started/03 Your First React App.mp4">03 Your First React App (6:33)</a></li>
+                    <li><a data-url="F:/Mastering React/01 Getting Started/04 Hello World.mp4">04 Hello World (5:25)</a></li>
+                    <li><a data-url="F:/Mastering React/01 Getting Started/05 Custom Configs.mp4">05 Custom Configs (3:11)</a></li>
+                    <li><a data-url="F:/Mastering React/01 Getting Started/06 Full-stack Architecture.mp4">06 Full-stack Architecture (2:44)</a></li>
+                    <li><a data-url="F:/Mastering React/01 Getting Started/07 Course Structure.mp4">07 Course Structure (2:24)</a></li>
+                    <li><a data-url="javascript:void(0);">Redux?</a></li>
+                </ul>
+                
+                <h5>ES6 REFRESHER (00:48)</h5>
+                <ul>
+                    <li><a data-url="F:/Mastering React/02 ES6 Refresher/01 Introduction.mp4">01 Introduction (1:43)</a></li>
+                    <li><a data-url="F:/Mastering React/02 ES6 Refresher/02 Let vs Var vs Const.mp4">02 Let vs Var vs Const (3:52)</a></li>
+                    <li><a data-url="F:/Mastering React/02 ES6 Refresher/03 Objects.mp4">03 Objects (2:45)</a></li>
+                    <li><a data-url="F:/Mastering React/02 ES6 Refresher/04 The this Keyword.mp4">04 The this Keyword (2:49)</a></li>
+                    <li><a data-url="F:/Mastering React/02 ES6 Refresher/05 Binding this.mp4">05 Binding this (2:36)</a></li>
+                    <li><a data-url="F:/Mastering React/02 ES6 Refresher/06 Arrow Functions.mp4">06 Arrow Functions (4:15)</a></li>
+                    <li><a data-url="F:/Mastering React/02 ES6 Refresher/07 Arrow Functions and this.mp4">07 Arrow Functions and this (4:14)</a></li>
+                    <li><a data-url="F:/Mastering React/02 ES6 Refresher/08 Array.map Method.mp4">08 Array.map Method (3:36)</a></li>
+                    <li><a data-url="F:/Mastering React/02 ES6 Refresher/09 Object Destructuring.mp4">09 Object Destructuring (2:29)</a></li>
+                    <li><a data-url="F:/Mastering React/02 ES6 Refresher/10 Spread Operator.mp4">10 Spread Operator (4:02)</a></li>
+                    <li><a data-url="F:/Mastering React/02 ES6 Refresher/11 Classes.mp4">11 Classes (3:45)</a></li>
+                    <li><a data-url="F:/Mastering React/02 ES6 Refresher/12 Inheritance.mp4">12 Inheritance (4:03)</a></li>
+                    <li><a data-url="F:/Mastering React/02 ES6 Refresher/13 Modules.mp4">13 Modules (4:11)</a></li>
+                    <li><a data-url="F:/Mastering React/02 ES6 Refresher/14 Named and Default Exports.mp4">14 Named and Default Exports (5:15)</a></li>
+                </ul>   
+                <h5>COMPONENTS (01:17)</h5>
+                <ul>
+                    <li><a data-url="F:/Mastering React/03 Components/01 Introduction.mp4">01 Introduction (1:38)</a></li>
+                    <li><a data-url="F:/Mastering React/03 Components/02 Setting Up the Project.mp4">02 Setting Up the Project (2:06)</a></li>
+                    <li><a data-url="F:/Mastering React/03 Components/03 Your First React Component.mp4">03 Your First React Component (5:20)</a></li>
+                    <li><a data-url="F:/Mastering React/03 Components/04 Specifying Children.mp4">04 Specifying Children (4:16)</a></li>
+                    <li><a data-url="F:/Mastering React/03 Components/05 Embedding Expressions.mp4">05 Embedding Expressions (4:50)</a></li>
+                    <li><a data-url="F:/Mastering React/03 Components/06 Setting Attributes.mp4">06 Setting Attributes (5:45)</a></li>
+                    <li><a data-url="F:/Mastering React/03 Components/07 Rendering Classes Dynamically.mp4">07 Rendering Classes Dynamically (4:18)</a></li>
+                    <li><a data-url="F:/Mastering React/03 Components/08 Rendering Lists.mp4">08  Rendering Lists (3:58)</a></li>
+                    <li><a data-url="F:/Mastering React/03 Components/09 Conditional Rendering.mp4">09 Conditional Rendering (6:04)</a></li>
+                    <li><a data-url="F:/Mastering React/03 Components/10 Handling Events.mp4">10 Handling Events (2:49)</a></li>
+                    <li><a data-url="F:/Mastering React/03 Components/11 Binding Event Handlers.mp4">11 Binding Event Handlers (4:36)</a></li>
+                    <li><a data-url="F:/Mastering React/03 Components/12 Updating the State.mp4">12 Updating the State (2:14)</a></li>
+                    <li><a data-url="F:/Mastering React/03 Components/13 What Happens When State Changes.mp4">13 What Happens When State Changes (2:04)</a></li>
+                    <li><a data-url="F:/Mastering React/03 Components/14 Passing Event Arguments.mp4">14 Passing Event Arguments (3:04)</a></li>
+                    <li><a data-url="F:/Mastering React/03 Components/15 Setting Up the Vidly Project.mp4">15 Setting Up the Vidly Project (5:38)</a></li>
+                    <li><a data-url="F:/Mastering React/03 Components/16 Exercises.mp4">16 Exercises (3:25)</a></li>
+                    <li><a data-url="F:/Mastering React/03 Components/17 Building the Movies Component.mp4">17 Building the Movies Component (7:18)</a></li>
+                    <li><a data-url="F:/Mastering React/03 Components/18 Deleting a Movie.mp4">18 Deleting a Movie (5:18)</a></li>
+                    <li><a data-url="F:/Mastering React/03 Components/19 Conditional Rendering.mp4">19 Conditional Rendering (3:26)</a></li>
+                    <li><a data-url="F:/Mastering React/03 Components/20 Summary.mp4">20 Summary (0:36)</a></li>
+                </ul>   
+                <h5>COMPOSING COMPONENTS (01:19)</h5>
+                <ul>
+                    <li><a data-url="F:/Mastering React/04 Composing Components/01 Introduction.mp4">01 Introduction (0:45)</a></li>
+                    <li><a data-url="F:/Mastering React/04 Composing Components/02 Composing Components.mp4">02 Composing Components (3:45)</a></li>
+                    <li><a data-url="F:/Mastering React/04 Composing Components/03 Passing Data to Components.mp4">03 Passing Data to Components (3:11)</a></li>
+                    <li><a data-url="F:/Mastering React/04 Composing Components/04 Passing Children.mp4">04 Passing Children (3:10)</a></li>
+                    <li><a data-url="F:/Mastering React/04 Composing Components/05 Debugging React Apps.mp4">05 Debugging React Apps (4:09)</a></li>
+                    <li><a data-url="F:/Mastering React/04 Composing Components/06 Props vs State.mp4">06 Props vs State (2:24)</a></li>
+                    <li><a data-url="F:/Mastering React/04 Composing Components/07 Raising and Handling Events.mp4">07 Raising and Handling Events (4:52)</a></li>
+                    <li><a data-url="F:/Mastering React/04 Composing Components/08 Updating the State.mp4">08 Updating the State (4:38)</a></li>
+                    <li><a data-url="F:/Mastering React/04 Composing Components/09 Single Source of Truth.mp4">09 Single Source of Truth (3:55)</a></li>
+                    <li><a data-url="F:/Mastering React/04 Composing Components/10 Removing the Local State.mp4">10 Removing the Local State (6:47)</a></li>
+                    <li><a data-url="F:/Mastering React/04 Composing Components/11 Multiple Components in Sync.mp4">11 Multiple Components in Sync (5:53)</a></li>
+                    <li><a data-url="F:/Mastering React/04 Composing Components/12 Lifting the State Up.mp4">12 Lifting the State Up (5:36)</a></li>
+                    <li><a data-url="F:/Mastering React/04 Composing Components/13 Stateless Functional Components.mp4">13 Stateless Functional Components (2:29)</a></li>
+                    <li><a data-url="F:/Mastering React/04 Composing Components/14 Destructuring Arguments.mp4">14 Destructuring Arguments (2:00)</a></li>
+                    <li><a data-url="F:/Mastering React/04 Composing Components/15 Lifecycle Hooks.mp4">15 Lifecycle Hooks (1:38)</a></li>
+                    <li><a data-url="F:/Mastering React/04 Composing Components/16 Mounting Phase.mp4">16 Mounting Phase (5:34)</a></li>
+                    <li><a data-url="F:/Mastering React/04 Composing Components/17 Updating Phase.mp4">17 Updating Phase (4:20)</a></li>
+                    <li><a data-url="F:/Mastering React/04 Composing Components/18 Unmounting Phase.mp4">18 Unmounting Phase (1:26)</a></li>
+                    <li><a data-url="F:/Mastering React/04 Composing Components/19 Exercise - Decrement Button.mp4">19 Exercise - Decrement Button (1:05)</a></li>
+                    <li><a data-url="F:/Mastering React/04 Composing Components/20 Solution - Decrement Button.mp4">20 Solution - Decrement Button (4:53)</a></li>
+                    <li><a data-url="F:/Mastering React/04 Composing Components/21 Exercise - Like Component.mp4">21 Exercise - Like Component (1:44)</a></li>
+                    <li><a data-url="F:/Mastering React/04 Composing Components/22 Solution - Like Component.mp4">22 Solution - Like Component (12:26)</a></li>
+                    <li><a data-url="F:/Mastering React/04 Composing Components/23 Summary.mp4">23 Summary (0:42)</a></li>
+                </ul>   
+                <h5>PAGINATION, FILTERING, AND SORTING (01:47)</h5>
+                <ul>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/01 Introduction.mp4">01 Introduction (1:08)</a></li>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/02 Exercise - Pagination Component.mp4">02 Exercise - Pagination Component (1:01)</a></li>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/03 Pagination - Component Interface.mp4">03 Pagination - Component Interface (3:47)</a></li>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/04 Pagination - Displaying Pages.mp4">04 Pagination - Displaying Pages (6:48)</a></li>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/05 Pagination - Handling Page Changes.mp4">05 Pagination - Handling Page Changes (5:49)</a></li>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/06 Pagination - Paginating Data.mp4">06 Pagination - Paginating Data (6:14)</a></li>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/07 Pagination - Type Checking with PropTypes.mp4">07 Pagination - Type Checking with PropTypes (4:56)</a></li>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/08 Exercise - ListGroup Component.mp4">08 Exercise - ListGroup Component (1:24)</a></li>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/09 Filtering - Component Interface.mp4">09 Filtering - Component Interface (5:32)</a></li>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/10 Filtering - Displaying Items.mp4">10 Filtering - Displaying Items (3:57)</a></li>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/11 Filtering - Default Props.mp4">11 Filtering - Default Props (2:06)</a></li>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/12 Filtering - Handling Selection.mp4">12 Filtering - Handling Selection (4:20)</a></li>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/13 Filtering - Implementing Filtering.mp4">13 Filtering - Implementing Filtering (2:59)</a></li>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/14 Filtering - Adding All Genres.mp4">14 Filtering - Adding All Genres (3:39)</a></li>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/15 Sorting - Extracting MoviesTable.mp4">15 Sorting- Extracting MoviesTable (5:19)</a></li>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/16 Sorting - Raising the Sort Event.mp4">16 Sorting - Raising the Sort Event (3:28)</a></li>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/17 Sorting - Implementing Sorting.mp4">17 Sorting - Implementing Sorting (5:13)</a></li>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/18 Sorting - Moving Responsibility.mp4">18 Sorting - Moving Responsibility (5:15)</a></li>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/19 Sorting - Extracting TableHeader.mp4">19 Sorting - Extracting TableHeader (7:44)</a></li>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/20 Sorting - Extracting TableBody.mp4">20 Sorting - Extracting TableBody (3:12)</a></li>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/21 Sorting - Rendering Cell Content.mp4">21 Sorting - Rendering Cell Content (8:02)</a></li>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/22 Sorting - Unique Keys - Final.mp4">22 Sorting - Unique Keys - Final (2:58)</a></li>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/23 Sorting - Adding the Sort Icon.mp4">23 Sorting - Adding the Sort Icon (3:57)</a></li>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/24 Sorting - Extracting Table.mp4">24 Sorting - Extracting Table (3:51)</a></li>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/25 Sorting - Extracting a Method.mp4">25 Sorting - Extracting a Method (3:18)</a></li>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/26 Destructuring Arguments.mp4">26 Destructuring Arguments (0:58)</a></li>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/27 Summary.mp4">27 Summary (0:51)</a></li>
+                    <li><a data-url="F:/Mastering React/05 Pagination, Filtering, and Sorting/Start A Qui.mp4">Start A Quick Note</a></li>
+                </ul>   
+                <h5>ROUTING (00:53)</h5>
+                <ul>
+                    <li><a data-url="F:/Mastering React/06 Routing/01 Introduction.mp4">01 Introduction (0:33)</a></li>
+                    <li><a data-url="F:/Mastering React/06 Routing/02 Setup.mp4">02 Setup (1:46)</a></li>
+                    <li><a data-url="F:/Mastering React/06 Routing/03 Adding Routing.mp4">03 Adding Routing (4:15)</a></li>
+                    <li><a data-url="F:/Mastering React/06 Routing/04 Switch.mp4">04 Switch (2:26)</a></li>
+                    <li><a data-url="F:/Mastering React/06 Routing/05 Link.mp4">05 Link (4:20)</a></li>
+                    <li><a data-url="F:/Mastering React/06 Routing/06 Route Props.mp4">06 Route Props (2:10)</a></li>
+                    <li><a data-url="F:/Mastering React/06 Routing/07 Passing Props.mp4">07 Passing Props (2:35)</a></li>
+                    <li><a data-url="F:/Mastering React/06 Routing/08 Route Parameters.mp4">08 Route Parameters (3:32)</a></li>
+                    <li><a data-url="F:/Mastering React/06 Routing/09 Optional Parameters.mp4">09 Optional Parameters (2:06)</a></li>
+                    <li><a data-url="F:/Mastering React/06 Routing/10 Query String Parameters.mp4">10 Query String Parameters (3:51)</a></li>
+                    <li><a data-url="F:/Mastering React/06 Routing/11 Redirects.mp4">11 Redirects (3:06)</a></li>
+                    <li><a data-url="F:/Mastering React/06 Routing/12 Programmatic Navigation.mp4">12 Programmatic Navigation (2:20)</a></li>
+                    <li><a data-url="F:/Mastering React/06 Routing/13 Nested Routing.mp4">13 Nested Routing (4:35)</a></li>
+                    <li><a data-url="F:/Mastering React/06 Routing/14 Exercises - NavBar and Routing.mp4">14 Exercises - NavBar and Routing (1:43)</a></li>
+                    <li><a data-url="F:/Mastering React/06 Routing/15 Adding React Router.mp4">15 Adding React Router (1:26)</a></li>
+                    <li><a data-url="F:/Mastering React/06 Routing/16 Adding Routes.mp4">16 Adding Routes (4:57)</a></li>
+                    <li><a data-url="F:/Mastering React/06 Routing/17 Adding the NavBar.mp4">17 Adding the NavBar (4:39)</a></li>
+                    <li><a data-url="F:/Mastering React/06 Routing/18 Linking to the MovieForm.mp4">18 Linking to the MovieForm (4:42)</a></li>
+                    <li><a data-url="F:/Mastering React/06 Routing/19 Summary.mp4">19 Summary (0:31)</a></li>
+                </ul>   
+                <h5>FORMS (01:34)</h5>
+                <ul>
+                    <li><a data-url="F:/Mastering React/07 Forms/01 Introduction.mp4">01 Introduction (0:38)</a></li>
+                    <li><a data-url="F:/Mastering React/07 Forms/02 Building a Bootstrap Form.mp4">02 Building a Bootstrap Form (5:34)</a></li>
+                    <li><a data-url="F:/Mastering React/07 Forms/03 Handling Form Submission.mp4">03 Handling Form Submission (2:00)</a></li>
+                    <li><a data-url="F:/Mastering React/07 Forms/04 Refs.mp4">04 Refs (3:58)</a></li>
+                    <li><a data-url="F:/Mastering React/07 Forms/05 Controlled Elements.mp4">05 Controlled Elements (4:32)</a></li>
+                    <li><a data-url="F:/Mastering React/07 Forms/06 Handling Multiple Inputs.mp4">06 Handling Multiple Inputs (2:49)</a></li>
+                    <li><a data-url="F:/Mastering React/07 Forms/07 Common Errors.mp4">07 Common Errors (2:28)</a></li>
+                    <li><a data-url="F:/Mastering React/07 Forms/08 Extracting a Reusable Input.mp4">08 Extracting a Reusable Input (3:57)</a></li>
+                    <li><a data-url="F:/Mastering React/07 Forms/09 Validation.mp4">09 Validation (2:56)</a></li>
+                    <li><a data-url="F:/Mastering React/07 Forms/10 A Basic Validation Implementation.mp4">10 A Basic Validation Implementation (3:11)</a></li>
+                    <li><a data-url="F:/Mastering React/07 Forms/11 Displaying Validation Errors.mp4">11 Displaying Validation Errors (3:42)</a></li>
+                    <li><a data-url="F:/Mastering React/07 Forms/12 Validation on Change.mp4">12 Validation on Change (4:19)</a></li>
+                    <li><a data-url="F:/Mastering React/07 Forms/13 Joi.mp4">13 Joi (4:33)</a></li>
+                    <li><a data-url="F:/Mastering React/07 Forms/14 Validating a Form Using Joi.mp4">14 Validating a Form Using Joi (4:43)</a></li>
+                    <li><a data-url="F:/Mastering React/07 Forms/15 Validating a Field Using Joi.mp4">15 Validating a Field Using Joi (5:22)</a></li>
+                    <li><a data-url="F:/Mastering React/07 Forms/16 Disabling the Submit Button.mp4">16 Disabling the Submit Button (1:11)</a></li>
+                    <li><a data-url="F:/Mastering React/07 Forms/17 Code Review.mp4">17 Code Review (3:13)</a></li>
+                    <li><a data-url="F:/Mastering React/07 Forms/18 Extracting a Reusable Form.mp4">18 Extracting a Reusable Form (4:51)</a></li>
+                    <li><a data-url="F:/Mastering React/07 Forms/19 Extracting Helper Rendering Methods.mp4">19 Extracting Helper Rendering Methods (8:18)</a></li>
+                    <li><a data-url="F:/Mastering React/07 Forms/20 Register Form.mp4">20 Register Form (1:42)</a></li>
+                    <li><a data-url="F:/Mastering React/07 Forms/21 Code Review.mp4">21 Code Review (1:10)</a></li>
+                    <li><a data-url="F:/Mastering React/07 Forms/22 Exercise 2- Movie Form.mp4">22 Exercise 2- Movie Form (3:18)</a></li>
+                    <li><a data-url="F:/Mastering React/07 Forms/23 Code Review.mp4">23 Code Review (8:24)</a></li>
+                    <li><a data-url="F:/Mastering React/07 Forms/24 Exercise 3- Search Movies.mp4">24 Exercise 3- Search Movies (1:22)</a></li>
+                    <li><a data-url="F:/Mastering React/07 Forms/25 Code Review.mp4">25 Code Review (5:12)</a></li>
+                </ul>   
+                <h5>CALLING BACKENED SERICES (01:42)</h5>
+                <ul>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/01 Introduction.mp4">01 Introduction (1:13)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/02 JSON Placeholder.mp4">02 JSON Placeholder (2:54)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/03 Http Clients.mp4">03 Http Clients (2:56)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/04 Getting Data.mp4">04 Getting Data (5:26)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/05 Creating Data.mp4">05 Creating Data (4:52)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/06 Lifecycle of a Request.mp4">06 Lifecycle of a Request (2:50)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/07 Updating Data.mp4">07 Updating Data (4:14)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/08 Deleting Data.mp4">08 Deleting Data (1:35)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/09 Optimistic vs Pessimistic Updates.mp4">09 Optimistic vs Pessimistic Updates (4:24)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/10 Expected vs Unexpected Errors.mp4">10 Expected vs Unexpected Errors (6:40)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/11 Handling Unexpected Errors Globally.mp4">11 Handling Unexpected Errors Globally (7:54)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/12 Extracting a Reusable Http Service.mp4">12 Extracting a Reusable Http Service (3:43)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/13 Extracting a Config Module.mp4">13 Extracting a Config Module (1:36)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/14 Displaying Toast Notifications.mp4">14 Displaying Toast Notifications (2:56)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/15 Logging Errors.mp4">15 Logging Errors (5:47)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/16 Extracting a Logger Service.mp4">16 Extracting a Logger Service (4:25)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/17 Vidly Backend.mp4">17 Vidly Backend (1:50)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/18 Installing MongoDB on Mac.mp4">18 Installing MongoDB on Mac (3:58)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/19 Installing MongoDB on Windows.mp4">19 Installing MongoDB on Windows (5:39)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/20 Setting Up the Node Backend.mp4">20 Setting Up the Node Backend (2:44)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/21 Disabling Authentication.mp4">21 Disabling Authentication (4:01)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/22 Exercise- Connect Movies Page to the Backend.mp4">22 Exercise- Connect Movies Page to the Backend (1:56)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/23 Adding Http and Log Services.mp4">23 Adding Http and Log Services (2:38)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/24 Replacing FakeGenreService.mp4">24 Replacing FakeGenreService (3:23)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/25 Replacing FakeMovieService.mp4">25 Replacing FakeMovieService (5:48)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/26 Extracting a Config File.mp4">26 Extracting a Config File (1:54)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/27 Exercise- Connect Movie Form to the Backend.mp4">27 Exercise- Connect Movie Form to the Backend (0:56)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/28 Populating the Form.mp4">28 Populating the Form (3:45)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/29 Refactoring.mp4">29 Refactoring (2:30)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/30 Saving the Movie.mp4">30 Saving the Movie (2:40)</a></li>
+                    <li><a data-url="F:/Mastering React/08 Calling Backend Services/31 Refactoring.mp4">31 Refactoring (2:36)</a></li>
+                </ul>   
+                <h5>AUTHENTICATION AND AUTHORIZATION (01:41)</h5>
+                <ul>
+                    <li><a data-url="F:/Mastering React/09 Authentication and Authorization/01 Introduction.mp4">01 Introduction (0:49)</a></li>
+                    <li><a data-url="F:/Mastering React/09 Authentication and Authorization/02 Registering a New User.mp4">02 Registering a New User (2:37)</a></li>
+                    <li><a data-url="F:/Mastering React/09 Authentication and Authorization/03 Submitting the Registration Form.mp4">03 Submitting the Registration Form (4:30)</a></li>
+                    <li><a data-url="F:/Mastering React/09 Authentication and Authorization/04 Handling Registration Errors.mp4">04 Handling Registration Errors (1:58)</a></li>
+                    <li><a data-url="F:/Mastering React/09 Authentication and Authorization/05 Logging in a User.mp4">05 Logging in a User (1:43)</a></li>
+                    <li><a data-url="F:/Mastering React/09 Authentication and Authorization/06 Submitting the Login Form.mp4">06 Submitting the Login Form (2:23)</a></li>
+                    <li><a data-url="F:/Mastering React/09 Authentication and Authorization/07 Handling Login Errors.mp4">07 Handling Login Errors (1:51)</a></li>
+                    <li><a data-url="F:/Mastering React/09 Authentication and Authorization/08 Storing the JWT.mp4">08 Storing the JWT (3:04)</a></li>
+                    <li><a data-url="F:/Mastering React/09 Authentication and Authorization/09 Logging in the User upon Registration.mp4">09 Logging in the User upon Registration (5:37)</a></li>
+                    <li><a data-url="F:/Mastering React/09 Authentication and Authorization/10 JSON Web Tokens (JWT).mp4">10 JSON Web Tokens (JWT) (3:59)</a></li>
+                    <li><a data-url="F:/Mastering React/09 Authentication and Authorization/11 Getting the Current User.mp4">11 Getting the Current User (4:18)</a></li>
+                    <li><a data-url="F:/Mastering React/09 Authentication and Authorization/12 Displaying the Current User on NavBar.mp4">12 Displaying the Current User on NavBar (4:48)</a></li>
+                    <li><a data-url="F:/Mastering React/09 Authentication and Authorization/13 Logging out a User.mp4">13 Logging out a User (2:44)</a></li>
+                    <li><a data-url="F:/Mastering React/09 Authentication and Authorization/14 Refactoring.mp4">14 Refactoring (10:03)</a></li>
+                    <li><a data-url="F:/Mastering React/09 Authentication and Authorization/15 Calling Protected API Endpoints.mp4">15 Calling Protected API Endpoints (4:10)</a></li>
+                    <li><a data-url="F:/Mastering React/09 Authentication and Authorization/16 Fixing Bi-directional Dependencies.mp4">16 Fixing Bi-directional Dependencies (2:43)</a></li>
+                    <li><a data-url="F:/Mastering React/09 Authentication and Authorization/17 Authorization.mp4">17 Authorization (6:30)</a></li>
+                    <li><a data-url="F:/Mastering React/09 Authentication and Authorization/18 Showing or Hiding Elements based on the User.mp4">18 Showing or Hiding Elements based on the User (2:40)</a></li>
+                    <li><a data-url="F:/Mastering React/09 Authentication and Authorization/19 Protecting Routes.mp4">19 Protecting Routes (2:50)</a></li>
+                    <li><a data-url="F:/Mastering React/09 Authentication and Authorization/20 Extracting ProtectedRoute.mp4">20 Extracting ProtectedRoute (5:55)</a></li>
+                    <li><a data-url="F:/Mastering React/09 Authentication and Authorization/21 Redirecting after Login.mp4">21 Redirecting after Login (5:40)</a></li>
+                    <li><a data-url="F:/Mastering React/09 Authentication and Authorization/22 Exercise.mp4">22 Exercise (0:19)</a></li>
+                    <li><a data-url="F:/Mastering React/09 Authentication and Authorization/23 Hiding the Delete Column.mp4">23 Hiding the Delete Column (4:19)</a></li>
+                </ul>   
+                <h5>DEPLOYMENT (00:35)</h5>
+                <ul>
+                    <li><a data-url="F:/Mastering React/10 Deployment/01 Introduction.mp4">01 Introduction (0:38)</a></li>
+                    <li><a data-url="F:/Mastering React/10 Deployment/02 Environment Variables.mp4">02 Environment Variables (4:58)</a></li>
+                    <li><a data-url="F:/Mastering React/10 Deployment/03 Production Builds.mp4">03 Production Builds (2:48)</a></li>
+                    <li><a data-url="F:/Mastering React/10 Deployment/04 Getting ed with Heroku.mp4">04 Getting ed with Heroku (2:06)</a></li>
+                    <li><a data-url="F:/Mastering React/10 Deployment/05 MongoDB in the Cloud.mp4">05 MongoDB in the Cloud (2:35)</a></li>
+                    <li><a data-url="F:/Mastering React/10 Deployment/06 Adding Code to a Git Repository.mp4">06 Adding Code to a Git Repository (3:05)</a></li>
+                    <li><a data-url="F:/Mastering React/10 Deployment/07 Deploying to Heroku.mp4">07 Deploying to Heroku (3:01)</a></li>
+                    <li><a data-url="F:/Mastering React/10 Deployment/08 Viewing Logs.mp4">08 Viewing Logs (2:40)</a></li>
+                    <li><a data-url="F:/Mastering React/10 Deployment/09 Setting Environment Variables on Heroku.mp4">09 Setting Environment Variables on Heroku (4:37)</a></li>
+                    <li><a data-url="F:/Mastering React/10 Deployment/10 Preparing the Font-end for Deployment.mp4">10 Preparing the Font-end for Deployment (4:09)</a></li>
+                    <li><a data-url="F:/Mastering React/10 Deployment/11 Deploying the Front-end.mp4">11 Deploying the Front-end (2:38)</a></li>
+                </ul>   
+                <h5>ADVANCED TOPICS (01:04)</h5>
+                <ul>
+                    <li><a data-url="F:/Mastering React/01 Advanced Topics/01 Introduction.mp4">01 Introduction (0:31)</a></li>
+                    <li><a data-url="F:/Mastering React/01 Advanced Topics/02 Sour.mp4">02 Source Code</a></li>
+                    <li><a data-url="F:/Mastering React/01 Advanced Topics/03 Setting Up the Development Environment.mp4">03 Setting Up the Development Environment (3:13)</a></li>
+                    <li><a data-url="F:/Mastering React/01 Advanced Topics/04 Higher Order Components.mp4">04 Higher Order Components (2:04)</a></li>
+                    <li><a data-url="F:/Mastering React/01 Advanced Topics/05 Implementing a Higher Order Component.mp4">05 Implementing a Higher Order Component (8:35)</a></li>
+                    <li><a data-url="F:/Mastering React/01 Advanced Topics/06 Hooks.mp4">06 Hooks (3:06)</a></li>
+                    <li><a data-url="F:/Mastering React/01 Advanced Topics/07 The useState Hook.mp4">07 The useState Hook (8:30)</a></li>
+                    <li><a data-url="F:/Mastering React/01 Advanced Topics/08 The useEffect Hook.mp4">08 The useEffect Hook (5:46)</a></li>
+                    <li><a data-url="F:/Mastering React/01 Advanced Topics/09 Custom Hooks.mp4">09 Custom Hooks (3:04)</a></li>
+                    <li><a data-url="F:/Mastering React/01 Advanced Topics/10 Fetching Data with Hooks.mp4">10 Fetching Data with Hooks (4:37)</a></li>
+                    <li><a data-url="F:/Mastering React/01 Advanced Topics/11 Context.mp4">11 Context (2:10)</a></li>
+                    <li><a data-url="F:/Mastering React/01 Advanced Topics/12 Context in Class Components.mp4">12 Context in Class Components (9:46)</a></li>
+                    <li><a data-url="F:/Mastering React/01 Advanced Topics/13 Context in Functional Components.mp4">13 Context in Functional Components (3:33)</a></li>
+                    <li><a data-url="F:/Mastering React/01 Advanced Topics/14 Updating the Context.mp4">14 Updating the Context (7:06)</a></li>
+                    <li><a data-url="F:/Mastering React/01 Advanced Topics/15 Consuming Multiple Contexts.mp4">15 Consuming Multiple Contexts (2:24)</a></li>
+                    <li><a data-url="#" target="_blank">16 Thank You!</a></li>
+                    <li><a data-url="#" target="_blank">17 What to Learn Next</a></li>
+                    </ul>
+            </section>
+        </div>
+        <div class="col">
+            <aside>
+                <video id="videoPlayer" controls>
+                    <source src="F:/Mastering React/01 Getting Started/01 What is React.mp4" type="video/mp4">
+                  </video>
+            </aside>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("a").click(function() {
+    var newUrl = $(this).attr('data-url');
+    $(this).parent('li').addClass('active').siblings().removeClass('active');
+    $('#videoPlayer')[0].pause()
+    $('#videoPlayer').find('source').attr('src', newUrl);
+    $('#videoPlayer')[0].load();
+    $('#videoPlayer')[0].play()
+  });
+});
+</script>
 </body>
 </html>
