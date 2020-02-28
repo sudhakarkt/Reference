@@ -2,12 +2,9 @@
 <html>
 <title>A4 PDF PRINT</title>
 <head>
-    <link rel="stylesheet" href="print.css" />
-    <style media="print">
-        .pass-container:nth-child(4n) {
-            page-break-after: always;
-        }
-    </style>
+    <link rel="stylesheet" href="css/a4-print-style.css" />
+    <link rel="stylesheet" href="css/a4-print.css" />
+    <link media="print" rel="stylesheet" href="css/a4-print.css" />
 </head>
 <body>
     <div class="pass-wrapper">
@@ -72,6 +69,7 @@
                 </div>
             </div>
         </div>
+
         <div class="pass-container">
             <div class="pass-upload-image">
                 <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
@@ -133,6 +131,7 @@
                 </div>
             </div>
         </div>
+
         <div class="pass-container">
             <div class="pass-upload-image">
                 <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
@@ -194,6 +193,69 @@
                 </div>
             </div>
         </div>
+
+        <div class="pass-container four">
+            <div class="pass-upload-image">
+                <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
+                <input type="file" name="myFile" id="fileInput">
+                <input type="hidden" id="HdnImg" name="TempImage" value="">
+                <input type="hidden" id="HdnUserid" name="TempUser" value="">
+                <input type="hidden" id="fileName">
+                <span id="headerText">Upload Image (360 X 100)</span>
+            </div>
+            <div class="pass-profile-details">
+                <div class="row">
+                    <div class="col card-inner-text pr-0">
+                        <table border="0" class="passes-details">
+                            <tbody><tr>
+                                <td style="width:36%">
+                                    <span>Name</span>
+                                </td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblname" style="padding-left: 5px;">Sudhakar Thirugnanam</span></td>
+                            </tr>
+                            <tr>
+                                <td style="width:36%"><span>Department</span></td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblcallsign" style="padding-left: 5px;">Information Technology</span></td>
+                            </tr>
+                        </tbody></table>
+
+
+                    </div>
+                    <div class="col card-profile-image">
+                        <div class="pass-profile-image">
+                            <img style="height: 150px;width:100% !important;display:none" id="UserPhoto" src="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pass-image-block">
+                <div class="pass-image-block-row">
+                    <table border="0" class="staffpasses-id">
+                        <tbody><tr>
+                            <td style="width: 30%;">Agency</td>
+                            <td><span class="agency-colon">:</span><span id="lblagency">Tillid Software Solutions</span> </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 30%;">Staff ID</td>
+                            <td><span class="agency-colon">:</span><span id="lblempcode">053801072</span></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+            <div class="pass-code-block">
+                <div class="pass-image-block-row">
+                    <table class="hologram-qrcode-table">
+                        <tbody><tr>
+                            <td><div id="Hologram">HOLOGRAM</div></td>
+                            <td><div id="passesQrCode">QR Code</div></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+
         <div class="pass-container">
             <div class="pass-upload-image">
                 <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
@@ -255,6 +317,7 @@
                 </div>
             </div>
         </div>
+
         <div class="pass-container">
             <div class="pass-upload-image">
                 <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
@@ -316,6 +379,7 @@
                 </div>
             </div>
         </div>
+
         <div class="pass-container">
             <div class="pass-upload-image">
                 <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
@@ -377,6 +441,69 @@
                 </div>
             </div>
         </div>
+
+        <div class="pass-container four">
+            <div class="pass-upload-image">
+                <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
+                <input type="file" name="myFile" id="fileInput">
+                <input type="hidden" id="HdnImg" name="TempImage" value="">
+                <input type="hidden" id="HdnUserid" name="TempUser" value="">
+                <input type="hidden" id="fileName">
+                <span id="headerText">Upload Image (360 X 100)</span>
+            </div>
+            <div class="pass-profile-details">
+                <div class="row">
+                    <div class="col card-inner-text pr-0">
+                        <table border="0" class="passes-details">
+                            <tbody><tr>
+                                <td style="width:36%">
+                                    <span>Name</span>
+                                </td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblname" style="padding-left: 5px;">Sudhakar Thirugnanam</span></td>
+                            </tr>
+                            <tr>
+                                <td style="width:36%"><span>Department</span></td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblcallsign" style="padding-left: 5px;">Information Technology</span></td>
+                            </tr>
+                        </tbody></table>
+
+
+                    </div>
+                    <div class="col card-profile-image">
+                        <div class="pass-profile-image">
+                            <img style="height: 150px;width:100% !important;display:none" id="UserPhoto" src="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pass-image-block">
+                <div class="pass-image-block-row">
+                    <table border="0" class="staffpasses-id">
+                        <tbody><tr>
+                            <td style="width: 30%;">Agency</td>
+                            <td><span class="agency-colon">:</span><span id="lblagency">Tillid Software Solutions</span> </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 30%;">Staff ID</td>
+                            <td><span class="agency-colon">:</span><span id="lblempcode">053801072</span></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+            <div class="pass-code-block">
+                <div class="pass-image-block-row">
+                    <table class="hologram-qrcode-table">
+                        <tbody><tr>
+                            <td><div id="Hologram">HOLOGRAM</div></td>
+                            <td><div id="passesQrCode">QR Code</div></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+
         <div class="pass-container">
             <div class="pass-upload-image">
                 <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
@@ -438,6 +565,7 @@
                 </div>
             </div>
         </div>
+
         <div class="pass-container">
             <div class="pass-upload-image">
                 <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
@@ -499,6 +627,7 @@
                 </div>
             </div>
         </div>
+
         <div class="pass-container">
             <div class="pass-upload-image">
                 <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
@@ -560,6 +689,69 @@
                 </div>
             </div>
         </div>
+
+        <div class="pass-container four">
+            <div class="pass-upload-image">
+                <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
+                <input type="file" name="myFile" id="fileInput">
+                <input type="hidden" id="HdnImg" name="TempImage" value="">
+                <input type="hidden" id="HdnUserid" name="TempUser" value="">
+                <input type="hidden" id="fileName">
+                <span id="headerText">Upload Image (360 X 100)</span>
+            </div>
+            <div class="pass-profile-details">
+                <div class="row">
+                    <div class="col card-inner-text pr-0">
+                        <table border="0" class="passes-details">
+                            <tbody><tr>
+                                <td style="width:36%">
+                                    <span>Name</span>
+                                </td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblname" style="padding-left: 5px;">Sudhakar Thirugnanam</span></td>
+                            </tr>
+                            <tr>
+                                <td style="width:36%"><span>Department</span></td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblcallsign" style="padding-left: 5px;">Information Technology</span></td>
+                            </tr>
+                        </tbody></table>
+
+
+                    </div>
+                    <div class="col card-profile-image">
+                        <div class="pass-profile-image">
+                            <img style="height: 150px;width:100% !important;display:none" id="UserPhoto" src="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pass-image-block">
+                <div class="pass-image-block-row">
+                    <table border="0" class="staffpasses-id">
+                        <tbody><tr>
+                            <td style="width: 30%;">Agency</td>
+                            <td><span class="agency-colon">:</span><span id="lblagency">Tillid Software Solutions</span> </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 30%;">Staff ID</td>
+                            <td><span class="agency-colon">:</span><span id="lblempcode">053801072</span></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+            <div class="pass-code-block">
+                <div class="pass-image-block-row">
+                    <table class="hologram-qrcode-table">
+                        <tbody><tr>
+                            <td><div id="Hologram">HOLOGRAM</div></td>
+                            <td><div id="passesQrCode">QR Code</div></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+
         <div class="pass-container">
             <div class="pass-upload-image">
                 <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
@@ -621,6 +813,7 @@
                 </div>
             </div>
         </div>
+
         <div class="pass-container">
             <div class="pass-upload-image">
                 <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
@@ -682,6 +875,7 @@
                 </div>
             </div>
         </div>
+
         <div class="pass-container">
             <div class="pass-upload-image">
                 <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
@@ -743,6 +937,69 @@
                 </div>
             </div>
         </div>
+
+        <div class="pass-container four">
+            <div class="pass-upload-image">
+                <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
+                <input type="file" name="myFile" id="fileInput">
+                <input type="hidden" id="HdnImg" name="TempImage" value="">
+                <input type="hidden" id="HdnUserid" name="TempUser" value="">
+                <input type="hidden" id="fileName">
+                <span id="headerText">Upload Image (360 X 100)</span>
+            </div>
+            <div class="pass-profile-details">
+                <div class="row">
+                    <div class="col card-inner-text pr-0">
+                        <table border="0" class="passes-details">
+                            <tbody><tr>
+                                <td style="width:36%">
+                                    <span>Name</span>
+                                </td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblname" style="padding-left: 5px;">Sudhakar Thirugnanam</span></td>
+                            </tr>
+                            <tr>
+                                <td style="width:36%"><span>Department</span></td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblcallsign" style="padding-left: 5px;">Information Technology</span></td>
+                            </tr>
+                        </tbody></table>
+
+
+                    </div>
+                    <div class="col card-profile-image">
+                        <div class="pass-profile-image">
+                            <img style="height: 150px;width:100% !important;display:none" id="UserPhoto" src="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pass-image-block">
+                <div class="pass-image-block-row">
+                    <table border="0" class="staffpasses-id">
+                        <tbody><tr>
+                            <td style="width: 30%;">Agency</td>
+                            <td><span class="agency-colon">:</span><span id="lblagency">Tillid Software Solutions</span> </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 30%;">Staff ID</td>
+                            <td><span class="agency-colon">:</span><span id="lblempcode">053801072</span></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+            <div class="pass-code-block">
+                <div class="pass-image-block-row">
+                    <table class="hologram-qrcode-table">
+                        <tbody><tr>
+                            <td><div id="Hologram">HOLOGRAM</div></td>
+                            <td><div id="passesQrCode">QR Code</div></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+
         <div class="pass-container">
             <div class="pass-upload-image">
                 <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
@@ -804,6 +1061,7 @@
                 </div>
             </div>
         </div>
+
         <div class="pass-container">
             <div class="pass-upload-image">
                 <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
@@ -865,6 +1123,7 @@
                 </div>
             </div>
         </div>
+
         <div class="pass-container">
             <div class="pass-upload-image">
                 <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
@@ -926,6 +1185,69 @@
                 </div>
             </div>
         </div>
+
+        <div class="pass-container four">
+            <div class="pass-upload-image">
+                <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
+                <input type="file" name="myFile" id="fileInput">
+                <input type="hidden" id="HdnImg" name="TempImage" value="">
+                <input type="hidden" id="HdnUserid" name="TempUser" value="">
+                <input type="hidden" id="fileName">
+                <span id="headerText">Upload Image (360 X 100)</span>
+            </div>
+            <div class="pass-profile-details">
+                <div class="row">
+                    <div class="col card-inner-text pr-0">
+                        <table border="0" class="passes-details">
+                            <tbody><tr>
+                                <td style="width:36%">
+                                    <span>Name</span>
+                                </td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblname" style="padding-left: 5px;">Sudhakar Thirugnanam</span></td>
+                            </tr>
+                            <tr>
+                                <td style="width:36%"><span>Department</span></td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblcallsign" style="padding-left: 5px;">Information Technology</span></td>
+                            </tr>
+                        </tbody></table>
+
+
+                    </div>
+                    <div class="col card-profile-image">
+                        <div class="pass-profile-image">
+                            <img style="height: 150px;width:100% !important;display:none" id="UserPhoto" src="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pass-image-block">
+                <div class="pass-image-block-row">
+                    <table border="0" class="staffpasses-id">
+                        <tbody><tr>
+                            <td style="width: 30%;">Agency</td>
+                            <td><span class="agency-colon">:</span><span id="lblagency">Tillid Software Solutions</span> </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 30%;">Staff ID</td>
+                            <td><span class="agency-colon">:</span><span id="lblempcode">053801072</span></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+            <div class="pass-code-block">
+                <div class="pass-image-block-row">
+                    <table class="hologram-qrcode-table">
+                        <tbody><tr>
+                            <td><div id="Hologram">HOLOGRAM</div></td>
+                            <td><div id="passesQrCode">QR Code</div></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+
         <div class="pass-container">
             <div class="pass-upload-image">
                 <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
@@ -987,6 +1309,7 @@
                 </div>
             </div>
         </div>
+
         <div class="pass-container">
             <div class="pass-upload-image">
                 <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
@@ -1048,6 +1371,7 @@
                 </div>
             </div>
         </div>
+
         <div class="pass-container">
             <div class="pass-upload-image">
                 <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
@@ -1109,6 +1433,69 @@
                 </div>
             </div>
         </div>
+
+        <div class="pass-container four">
+            <div class="pass-upload-image">
+                <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
+                <input type="file" name="myFile" id="fileInput">
+                <input type="hidden" id="HdnImg" name="TempImage" value="">
+                <input type="hidden" id="HdnUserid" name="TempUser" value="">
+                <input type="hidden" id="fileName">
+                <span id="headerText">Upload Image (360 X 100)</span>
+            </div>
+            <div class="pass-profile-details">
+                <div class="row">
+                    <div class="col card-inner-text pr-0">
+                        <table border="0" class="passes-details">
+                            <tbody><tr>
+                                <td style="width:36%">
+                                    <span>Name</span>
+                                </td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblname" style="padding-left: 5px;">Sudhakar Thirugnanam</span></td>
+                            </tr>
+                            <tr>
+                                <td style="width:36%"><span>Department</span></td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblcallsign" style="padding-left: 5px;">Information Technology</span></td>
+                            </tr>
+                        </tbody></table>
+
+
+                    </div>
+                    <div class="col card-profile-image">
+                        <div class="pass-profile-image">
+                            <img style="height: 150px;width:100% !important;display:none" id="UserPhoto" src="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pass-image-block">
+                <div class="pass-image-block-row">
+                    <table border="0" class="staffpasses-id">
+                        <tbody><tr>
+                            <td style="width: 30%;">Agency</td>
+                            <td><span class="agency-colon">:</span><span id="lblagency">Tillid Software Solutions</span> </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 30%;">Staff ID</td>
+                            <td><span class="agency-colon">:</span><span id="lblempcode">053801072</span></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+            <div class="pass-code-block">
+                <div class="pass-image-block-row">
+                    <table class="hologram-qrcode-table">
+                        <tbody><tr>
+                            <td><div id="Hologram">HOLOGRAM</div></td>
+                            <td><div id="passesQrCode">QR Code</div></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+
         <div class="pass-container">
             <div class="pass-upload-image">
                 <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
@@ -1170,6 +1557,193 @@
                 </div>
             </div>
         </div>
+
+        <div class="pass-container">
+            <div class="pass-upload-image">
+                <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
+                <input type="file" name="myFile" id="fileInput">
+                <input type="hidden" id="HdnImg" name="TempImage" value="">
+                <input type="hidden" id="HdnUserid" name="TempUser" value="">
+                <input type="hidden" id="fileName">
+                <span id="headerText">Upload Image (360 X 100)</span>
+            </div>
+            <div class="pass-profile-details">
+                <div class="row">
+                    <div class="col card-inner-text pr-0">
+                        <table border="0" class="passes-details">
+                            <tbody><tr>
+                                <td style="width:36%">
+                                    <span>Name</span>
+                                </td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblname" style="padding-left: 5px;">Sudhakar Thirugnanam</span></td>
+                            </tr>
+                            <tr>
+                                <td style="width:36%"><span>Department</span></td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblcallsign" style="padding-left: 5px;">Information Technology</span></td>
+                            </tr>
+                        </tbody></table>
+
+
+                    </div>
+                    <div class="col card-profile-image">
+                        <div class="pass-profile-image">
+                            <img style="height: 150px;width:100% !important;display:none" id="UserPhoto" src="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pass-image-block">
+                <div class="pass-image-block-row">
+                    <table border="0" class="staffpasses-id">
+                        <tbody><tr>
+                            <td style="width: 30%;">Agency 45</td>
+                            <td><span class="agency-colon">:</span><span id="lblagency">Tillid Software Solutions</span> </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 30%;">Staff ID</td>
+                            <td><span class="agency-colon">:</span><span id="lblempcode">053801072</span></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+            <div class="pass-code-block">
+                <div class="pass-image-block-row">
+                    <table class="hologram-qrcode-table">
+                        <tbody><tr>
+                            <td><div id="Hologram">HOLOGRAM</div></td>
+                            <td><div id="passesQrCode">QR Code</div></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+
+        <div class="pass-container">
+            <div class="pass-upload-image">
+                <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
+                <input type="file" name="myFile" id="fileInput">
+                <input type="hidden" id="HdnImg" name="TempImage" value="">
+                <input type="hidden" id="HdnUserid" name="TempUser" value="">
+                <input type="hidden" id="fileName">
+                <span id="headerText">Upload Image (360 X 100)</span>
+            </div>
+            <div class="pass-profile-details">
+                <div class="row">
+                    <div class="col card-inner-text pr-0">
+                        <table border="0" class="passes-details">
+                            <tbody><tr>
+                                <td style="width:36%">
+                                    <span>Name</span>
+                                </td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblname" style="padding-left: 5px;">Sudhakar Thirugnanam</span></td>
+                            </tr>
+                            <tr>
+                                <td style="width:36%"><span>Department</span></td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblcallsign" style="padding-left: 5px;">Information Technology</span></td>
+                            </tr>
+                        </tbody></table>
+
+
+                    </div>
+                    <div class="col card-profile-image">
+                        <div class="pass-profile-image">
+                            <img style="height: 150px;width:100% !important;display:none" id="UserPhoto" src="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pass-image-block">
+                <div class="pass-image-block-row">
+                    <table border="0" class="staffpasses-id">
+                        <tbody><tr>
+                            <td style="width: 30%;">Agency 23</td>
+                            <td><span class="agency-colon">:</span><span id="lblagency">Tillid Software Solutions</span> </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 30%;">Staff ID</td>
+                            <td><span class="agency-colon">:</span><span id="lblempcode">053801072</span></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+            <div class="pass-code-block">
+                <div class="pass-image-block-row">
+                    <table class="hologram-qrcode-table">
+                        <tbody><tr>
+                            <td><div id="Hologram">HOLOGRAM</div></td>
+                            <td><div id="passesQrCode">QR Code</div></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+
+        <div class="pass-container four">
+            <div class="pass-upload-image">
+                <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
+                <input type="file" name="myFile" id="fileInput">
+                <input type="hidden" id="HdnImg" name="TempImage" value="">
+                <input type="hidden" id="HdnUserid" name="TempUser" value="">
+                <input type="hidden" id="fileName">
+                <span id="headerText">Upload Image (360 X 100)</span>
+            </div>
+            <div class="pass-profile-details">
+                <div class="row">
+                    <div class="col card-inner-text pr-0">
+                        <table border="0" class="passes-details">
+                            <tbody><tr>
+                                <td style="width:36%">
+                                    <span>Name</span>
+                                </td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblname" style="padding-left: 5px;">Sudhakar Thirugnanam</span></td>
+                            </tr>
+                            <tr>
+                                <td style="width:36%"><span>Department</span></td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblcallsign" style="padding-left: 5px;">Information Technology</span></td>
+                            </tr>
+                        </tbody></table>
+
+
+                    </div>
+                    <div class="col card-profile-image">
+                        <div class="pass-profile-image">
+                            <img style="height: 150px;width:100% !important;display:none" id="UserPhoto" src="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pass-image-block">
+                <div class="pass-image-block-row">
+                    <table border="0" class="staffpasses-id">
+                        <tbody><tr>
+                            <td style="width: 30%;">Agency</td>
+                            <td><span class="agency-colon">:</span><span id="lblagency">Tillid Software Solutions</span> </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 30%;">Staff ID</td>
+                            <td><span class="agency-colon">:</span><span id="lblempcode">053801072</span></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+            <div class="pass-code-block">
+                <div class="pass-image-block-row">
+                    <table class="hologram-qrcode-table">
+                        <tbody><tr>
+                            <td><div id="Hologram">HOLOGRAM</div></td>
+                            <td><div id="passesQrCode">QR Code</div></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+
         <div class="pass-container">
             <div class="pass-upload-image">
                 <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
@@ -1231,6 +1805,193 @@
                 </div>
             </div>
         </div>
+
+        <div class="pass-container">
+            <div class="pass-upload-image">
+                <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
+                <input type="file" name="myFile" id="fileInput">
+                <input type="hidden" id="HdnImg" name="TempImage" value="">
+                <input type="hidden" id="HdnUserid" name="TempUser" value="">
+                <input type="hidden" id="fileName">
+                <span id="headerText">Upload Image (360 X 100)</span>
+            </div>
+            <div class="pass-profile-details">
+                <div class="row">
+                    <div class="col card-inner-text pr-0">
+                        <table border="0" class="passes-details">
+                            <tbody><tr>
+                                <td style="width:36%">
+                                    <span>Name</span>
+                                </td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblname" style="padding-left: 5px;">Sudhakar Thirugnanam</span></td>
+                            </tr>
+                            <tr>
+                                <td style="width:36%"><span>Department</span></td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblcallsign" style="padding-left: 5px;">Information Technology</span></td>
+                            </tr>
+                        </tbody></table>
+
+
+                    </div>
+                    <div class="col card-profile-image">
+                        <div class="pass-profile-image">
+                            <img style="height: 150px;width:100% !important;display:none" id="UserPhoto" src="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pass-image-block">
+                <div class="pass-image-block-row">
+                    <table border="0" class="staffpasses-id">
+                        <tbody><tr>
+                            <td style="width: 30%;">Agency 45</td>
+                            <td><span class="agency-colon">:</span><span id="lblagency">Tillid Software Solutions</span> </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 30%;">Staff ID</td>
+                            <td><span class="agency-colon">:</span><span id="lblempcode">053801072</span></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+            <div class="pass-code-block">
+                <div class="pass-image-block-row">
+                    <table class="hologram-qrcode-table">
+                        <tbody><tr>
+                            <td><div id="Hologram">HOLOGRAM</div></td>
+                            <td><div id="passesQrCode">QR Code</div></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+
+        <div class="pass-container">
+            <div class="pass-upload-image">
+                <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
+                <input type="file" name="myFile" id="fileInput">
+                <input type="hidden" id="HdnImg" name="TempImage" value="">
+                <input type="hidden" id="HdnUserid" name="TempUser" value="">
+                <input type="hidden" id="fileName">
+                <span id="headerText">Upload Image (360 X 100)</span>
+            </div>
+            <div class="pass-profile-details">
+                <div class="row">
+                    <div class="col card-inner-text pr-0">
+                        <table border="0" class="passes-details">
+                            <tbody><tr>
+                                <td style="width:36%">
+                                    <span>Name</span>
+                                </td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblname" style="padding-left: 5px;">Sudhakar Thirugnanam</span></td>
+                            </tr>
+                            <tr>
+                                <td style="width:36%"><span>Department</span></td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblcallsign" style="padding-left: 5px;">Information Technology</span></td>
+                            </tr>
+                        </tbody></table>
+
+
+                    </div>
+                    <div class="col card-profile-image">
+                        <div class="pass-profile-image">
+                            <img style="height: 150px;width:100% !important;display:none" id="UserPhoto" src="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pass-image-block">
+                <div class="pass-image-block-row">
+                    <table border="0" class="staffpasses-id">
+                        <tbody><tr>
+                            <td style="width: 30%;">Agency 23</td>
+                            <td><span class="agency-colon">:</span><span id="lblagency">Tillid Software Solutions</span> </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 30%;">Staff ID</td>
+                            <td><span class="agency-colon">:</span><span id="lblempcode">053801072</span></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+            <div class="pass-code-block">
+                <div class="pass-image-block-row">
+                    <table class="hologram-qrcode-table">
+                        <tbody><tr>
+                            <td><div id="Hologram">HOLOGRAM</div></td>
+                            <td><div id="passesQrCode">QR Code</div></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+
+        <div class="pass-container four">
+            <div class="pass-upload-image">
+                <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
+                <input type="file" name="myFile" id="fileInput">
+                <input type="hidden" id="HdnImg" name="TempImage" value="">
+                <input type="hidden" id="HdnUserid" name="TempUser" value="">
+                <input type="hidden" id="fileName">
+                <span id="headerText">Upload Image (360 X 100)</span>
+            </div>
+            <div class="pass-profile-details">
+                <div class="row">
+                    <div class="col card-inner-text pr-0">
+                        <table border="0" class="passes-details">
+                            <tbody><tr>
+                                <td style="width:36%">
+                                    <span>Name</span>
+                                </td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblname" style="padding-left: 5px;">Sudhakar Thirugnanam</span></td>
+                            </tr>
+                            <tr>
+                                <td style="width:36%"><span>Department</span></td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblcallsign" style="padding-left: 5px;">Information Technology</span></td>
+                            </tr>
+                        </tbody></table>
+
+
+                    </div>
+                    <div class="col card-profile-image">
+                        <div class="pass-profile-image">
+                            <img style="height: 150px;width:100% !important;display:none" id="UserPhoto" src="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pass-image-block">
+                <div class="pass-image-block-row">
+                    <table border="0" class="staffpasses-id">
+                        <tbody><tr>
+                            <td style="width: 30%;">Agency</td>
+                            <td><span class="agency-colon">:</span><span id="lblagency">Tillid Software Solutions</span> </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 30%;">Staff ID</td>
+                            <td><span class="agency-colon">:</span><span id="lblempcode">053801072</span></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+            <div class="pass-code-block">
+                <div class="pass-image-block-row">
+                    <table class="hologram-qrcode-table">
+                        <tbody><tr>
+                            <td><div id="Hologram">HOLOGRAM</div></td>
+                            <td><div id="passesQrCode">QR Code</div></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+
         <div class="pass-container">
             <div class="pass-upload-image">
                 <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
@@ -1292,6 +2053,193 @@
                 </div>
             </div>
         </div>
+
+        <div class="pass-container">
+            <div class="pass-upload-image">
+                <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
+                <input type="file" name="myFile" id="fileInput">
+                <input type="hidden" id="HdnImg" name="TempImage" value="">
+                <input type="hidden" id="HdnUserid" name="TempUser" value="">
+                <input type="hidden" id="fileName">
+                <span id="headerText">Upload Image (360 X 100)</span>
+            </div>
+            <div class="pass-profile-details">
+                <div class="row">
+                    <div class="col card-inner-text pr-0">
+                        <table border="0" class="passes-details">
+                            <tbody><tr>
+                                <td style="width:36%">
+                                    <span>Name</span>
+                                </td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblname" style="padding-left: 5px;">Sudhakar Thirugnanam</span></td>
+                            </tr>
+                            <tr>
+                                <td style="width:36%"><span>Department</span></td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblcallsign" style="padding-left: 5px;">Information Technology</span></td>
+                            </tr>
+                        </tbody></table>
+
+
+                    </div>
+                    <div class="col card-profile-image">
+                        <div class="pass-profile-image">
+                            <img style="height: 150px;width:100% !important;display:none" id="UserPhoto" src="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pass-image-block">
+                <div class="pass-image-block-row">
+                    <table border="0" class="staffpasses-id">
+                        <tbody><tr>
+                            <td style="width: 30%;">Agency 45</td>
+                            <td><span class="agency-colon">:</span><span id="lblagency">Tillid Software Solutions</span> </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 30%;">Staff ID</td>
+                            <td><span class="agency-colon">:</span><span id="lblempcode">053801072</span></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+            <div class="pass-code-block">
+                <div class="pass-image-block-row">
+                    <table class="hologram-qrcode-table">
+                        <tbody><tr>
+                            <td><div id="Hologram">HOLOGRAM</div></td>
+                            <td><div id="passesQrCode">QR Code</div></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+
+        <div class="pass-container">
+            <div class="pass-upload-image">
+                <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
+                <input type="file" name="myFile" id="fileInput">
+                <input type="hidden" id="HdnImg" name="TempImage" value="">
+                <input type="hidden" id="HdnUserid" name="TempUser" value="">
+                <input type="hidden" id="fileName">
+                <span id="headerText">Upload Image (360 X 100)</span>
+            </div>
+            <div class="pass-profile-details">
+                <div class="row">
+                    <div class="col card-inner-text pr-0">
+                        <table border="0" class="passes-details">
+                            <tbody><tr>
+                                <td style="width:36%">
+                                    <span>Name</span>
+                                </td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblname" style="padding-left: 5px;">Sudhakar Thirugnanam</span></td>
+                            </tr>
+                            <tr>
+                                <td style="width:36%"><span>Department</span></td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblcallsign" style="padding-left: 5px;">Information Technology</span></td>
+                            </tr>
+                        </tbody></table>
+
+
+                    </div>
+                    <div class="col card-profile-image">
+                        <div class="pass-profile-image">
+                            <img style="height: 150px;width:100% !important;display:none" id="UserPhoto" src="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pass-image-block">
+                <div class="pass-image-block-row">
+                    <table border="0" class="staffpasses-id">
+                        <tbody><tr>
+                            <td style="width: 30%;">Agency 23</td>
+                            <td><span class="agency-colon">:</span><span id="lblagency">Tillid Software Solutions</span> </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 30%;">Staff ID</td>
+                            <td><span class="agency-colon">:</span><span id="lblempcode">053801072</span></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+            <div class="pass-code-block">
+                <div class="pass-image-block-row">
+                    <table class="hologram-qrcode-table">
+                        <tbody><tr>
+                            <td><div id="Hologram">HOLOGRAM</div></td>
+                            <td><div id="passesQrCode">QR Code</div></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+
+        <div class="pass-container four">
+            <div class="pass-upload-image">
+                <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
+                <input type="file" name="myFile" id="fileInput">
+                <input type="hidden" id="HdnImg" name="TempImage" value="">
+                <input type="hidden" id="HdnUserid" name="TempUser" value="">
+                <input type="hidden" id="fileName">
+                <span id="headerText">Upload Image (360 X 100)</span>
+            </div>
+            <div class="pass-profile-details">
+                <div class="row">
+                    <div class="col card-inner-text pr-0">
+                        <table border="0" class="passes-details">
+                            <tbody><tr>
+                                <td style="width:36%">
+                                    <span>Name</span>
+                                </td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblname" style="padding-left: 5px;">Sudhakar Thirugnanam</span></td>
+                            </tr>
+                            <tr>
+                                <td style="width:36%"><span>Department</span></td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblcallsign" style="padding-left: 5px;">Information Technology</span></td>
+                            </tr>
+                        </tbody></table>
+
+
+                    </div>
+                    <div class="col card-profile-image">
+                        <div class="pass-profile-image">
+                            <img style="height: 150px;width:100% !important;display:none" id="UserPhoto" src="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pass-image-block">
+                <div class="pass-image-block-row">
+                    <table border="0" class="staffpasses-id">
+                        <tbody><tr>
+                            <td style="width: 30%;">Agency</td>
+                            <td><span class="agency-colon">:</span><span id="lblagency">Tillid Software Solutions</span> </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 30%;">Staff ID</td>
+                            <td><span class="agency-colon">:</span><span id="lblempcode">053801072</span></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+            <div class="pass-code-block">
+                <div class="pass-image-block-row">
+                    <table class="hologram-qrcode-table">
+                        <tbody><tr>
+                            <td><div id="Hologram">HOLOGRAM</div></td>
+                            <td><div id="passesQrCode">QR Code</div></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+
         <div class="pass-container">
             <div class="pass-upload-image">
                 <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
@@ -1353,7 +2301,132 @@
                 </div>
             </div>
         </div>
+
         <div class="pass-container">
+            <div class="pass-upload-image">
+                <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
+                <input type="file" name="myFile" id="fileInput">
+                <input type="hidden" id="HdnImg" name="TempImage" value="">
+                <input type="hidden" id="HdnUserid" name="TempUser" value="">
+                <input type="hidden" id="fileName">
+                <span id="headerText">Upload Image (360 X 100)</span>
+            </div>
+            <div class="pass-profile-details">
+                <div class="row">
+                    <div class="col card-inner-text pr-0">
+                        <table border="0" class="passes-details">
+                            <tbody><tr>
+                                <td style="width:36%">
+                                    <span>Name</span>
+                                </td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblname" style="padding-left: 5px;">Sudhakar Thirugnanam</span></td>
+                            </tr>
+                            <tr>
+                                <td style="width:36%"><span>Department</span></td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblcallsign" style="padding-left: 5px;">Information Technology</span></td>
+                            </tr>
+                        </tbody></table>
+
+
+                    </div>
+                    <div class="col card-profile-image">
+                        <div class="pass-profile-image">
+                            <img style="height: 150px;width:100% !important;display:none" id="UserPhoto" src="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pass-image-block">
+                <div class="pass-image-block-row">
+                    <table border="0" class="staffpasses-id">
+                        <tbody><tr>
+                            <td style="width: 30%;">Agency 45</td>
+                            <td><span class="agency-colon">:</span><span id="lblagency">Tillid Software Solutions</span> </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 30%;">Staff ID</td>
+                            <td><span class="agency-colon">:</span><span id="lblempcode">053801072</span></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+            <div class="pass-code-block">
+                <div class="pass-image-block-row">
+                    <table class="hologram-qrcode-table">
+                        <tbody><tr>
+                            <td><div id="Hologram">HOLOGRAM</div></td>
+                            <td><div id="passesQrCode">QR Code</div></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+
+        <div class="pass-container">
+            <div class="pass-upload-image">
+                <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
+                <input type="file" name="myFile" id="fileInput">
+                <input type="hidden" id="HdnImg" name="TempImage" value="">
+                <input type="hidden" id="HdnUserid" name="TempUser" value="">
+                <input type="hidden" id="fileName">
+                <span id="headerText">Upload Image (360 X 100)</span>
+            </div>
+            <div class="pass-profile-details">
+                <div class="row">
+                    <div class="col card-inner-text pr-0">
+                        <table border="0" class="passes-details">
+                            <tbody><tr>
+                                <td style="width:36%">
+                                    <span>Name</span>
+                                </td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblname" style="padding-left: 5px;">Sudhakar Thirugnanam</span></td>
+                            </tr>
+                            <tr>
+                                <td style="width:36%"><span>Department</span></td>
+                                <td style="width:5px;">:</td>
+                                <td style="padding-right: 0px;"><span id="lblcallsign" style="padding-left: 5px;">Information Technology</span></td>
+                            </tr>
+                        </tbody></table>
+
+
+                    </div>
+                    <div class="col card-profile-image">
+                        <div class="pass-profile-image">
+                            <img style="height: 150px;width:100% !important;display:none" id="UserPhoto" src="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pass-image-block">
+                <div class="pass-image-block-row">
+                    <table border="0" class="staffpasses-id">
+                        <tbody><tr>
+                            <td style="width: 30%;">Agency 23</td>
+                            <td><span class="agency-colon">:</span><span id="lblagency">Tillid Software Solutions</span> </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 30%;">Staff ID</td>
+                            <td><span class="agency-colon">:</span><span id="lblempcode">053801072</span></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+            <div class="pass-code-block">
+                <div class="pass-image-block-row">
+                    <table class="hologram-qrcode-table">
+                        <tbody><tr>
+                            <td><div id="Hologram">HOLOGRAM</div></td>
+                            <td><div id="passesQrCode">QR Code</div></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+
+        <div class="pass-container four">
             <div class="pass-upload-image">
                 <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
                 <input type="file" name="myFile" id="fileInput">
@@ -1414,75 +2487,5 @@
                 </div>
             </div>
         </div>
-        <div class="pass-container">
-            <div class="pass-upload-image">
-                <img style="height: 100px; width: 100% !important; display: none;" id="UserImage" src="">
-                <input type="file" name="myFile" id="fileInput">
-                <input type="hidden" id="HdnImg" name="TempImage" value="">
-                <input type="hidden" id="HdnUserid" name="TempUser" value="">
-                <input type="hidden" id="fileName">
-                <span id="headerText">Upload Image (360 X 100)</span>
-            </div>
-            <div class="pass-profile-details">
-                <div class="row">
-                    <div class="col card-inner-text pr-0">
-                        <table border="0" class="passes-details">
-                            <tbody><tr>
-                                <td style="width:36%">
-                                    <span>Name</span>
-                                </td>
-                                <td style="width:5px;">:</td>
-                                <td style="padding-right: 0px;"><span id="lblname" style="padding-left: 5px;">Sudhakar Thirugnanam</span></td>
-                            </tr>
-                            <tr>
-                                <td style="width:36%"><span>Department</span></td>
-                                <td style="width:5px;">:</td>
-                                <td style="padding-right: 0px;"><span id="lblcallsign" style="padding-left: 5px;">Information Technology</span></td>
-                            </tr>
-                        </tbody></table>
-
-
-                    </div>
-                    <div class="col card-profile-image">
-                        <div class="pass-profile-image">
-                            <img style="height: 150px;width:100% !important;display:none" id="UserPhoto" src="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="pass-image-block">
-                <div class="pass-image-block-row">
-                    <table border="0" class="staffpasses-id">
-                        <tbody><tr>
-                            <td style="width: 30%;">Agency</td>
-                            <td><span class="agency-colon">:</span><span id="lblagency">Tillid Software Solutions</span> </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 30%;">Staff ID</td>
-                            <td><span class="agency-colon">:</span><span id="lblempcode">053801072</span></td>
-                        </tr>
-                    </tbody></table>
-                </div>
-            </div>
-            <div class="pass-code-block">
-                <div class="pass-image-block-row">
-                    <table class="hologram-qrcode-table">
-                        <tbody><tr>
-                            <td><div id="Hologram">HOLOGRAM</div></td>
-                            <td><div id="passesQrCode">QR Code</div></td>
-                        </tr>
-                    </tbody></table>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script type="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
-    <script type="javascript">
-        $(document).ready(function(){
-            $('.pass-container:nth-child(3n)').hide();
-        });
-    </script>
 </body>
-</html>
+<html>
