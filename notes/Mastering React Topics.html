@@ -7,9 +7,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Mastering React</title>
     <style>
-
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
         body {
-            margin: 15px 15px 0px 15px;
+            margin: 0px;
+            background-color: #000;
+            color: #a0a0a0;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
         
         header {
@@ -17,9 +25,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #eaeaea;
-            text-transform: uppercase;
-            margin: -15px -15px 0px -15px ;
+            background-color: #383838;
+            color: #FFF;
+            margin: 0px ;
         }
 
         section {
@@ -29,19 +37,26 @@
 
         h1 {
             font-weight: 300;
+            text-transform: uppercase;
         }
        
         h5 {
-            margin: 15px 0 10px 0;
+            margin: 15px 5px 10px 5px;
+            font-weight: 300;
+            color: #FFF;
+            font-family: 'Open Sans Condensed';
         }
+
         ul {
             margin: 0px;
             padding: 0px;
         }
+
         ul li {
             list-style-type: none;
             padding: 0px;
             cursor: pointer;
+            margin-bottom: 1px;
         }
 
         ul li a {
@@ -49,8 +64,13 @@
             color: #565656;
         }
 
+
+        aside {
+            padding: 15px 15px 15px 0px;
+        }
+
         video {
-            margin-top: 30px;
+            margin: 0px;
             width: 100%;
         }
 
@@ -59,8 +79,41 @@
             padding: 3px 10px;
         }
 
-        li.active {
-            background-color: #E3E3E3;
+        li.active, li:hover {
+            background-color: #383838;
+        }
+
+        @media (max-width: 1023px) {
+            .row {
+                flex-wrap: wrap;
+                flex-basis: auto;
+                flex-direction: column-reverse;
+                height: 100%;
+            }
+
+            .container-fluid {
+                height: calc(100vh - 10vh);
+            }
+
+            section {
+                height: 100%;
+            }
+
+            .col {
+                width: 100% !important;
+                max-width: 100% !important;
+                flex-basis: auto;
+                height: calc(30vh - 5vh);
+            }
+
+            .video-container {
+                height: calc(55vh - 5vh);                
+            }
+
+            aside {
+                padding-right: 0;
+                padding-bottom: 0;
+            }
         }
     </style>
 </head>
@@ -71,7 +124,7 @@
 </header>
 <div class="container-fluid">
     <div class="row">
-        <div class="col" style="width: 400px; max-width: 400px;">
+        <div class="col" style="width: 475px; max-width: 475px;">
             <section>
                 <h5>GETTTING STARTED (00:28)</h5>
                 <ul>
@@ -328,11 +381,11 @@
                     </ul>
             </section>
         </div>
-        <div class="col">
+        <div class="col video-container">
             <aside>
                 <video id="videoPlayer" controls>
                     <source src="F:/Mastering React/01 Getting Started/01 What is React.mp4" type="video/mp4">
-                  </video>
+                </video>
             </aside>
         </div>
     </div>
