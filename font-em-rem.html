@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
         html, body {
-            font-size: 6px;
+            font-size: 14px;
         }
 
         .em-1 {
@@ -35,6 +35,32 @@
         .rem-3 {
             font-size: 3rem;
         }
+
+        .column-1 {
+            padding: 0 15px;
+        }
+
+        .column-4 {
+            width: auto;
+        }
+
+        .column-5 {
+            width: auto;
+        }
+
+        .column-3 {
+            width: auto;
+        }
+        
+        select::-ms-expand {
+            display: none;
+        }
+
+        input[type=text]::-ms-clear {
+            display: none;
+            width : 0;
+            height: 0;
+        }
     </style>
     <title>Hello, world!</title>
   </head>
@@ -49,6 +75,27 @@
     </div>
     <p class="rem-2">Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors. Put it all together and your pages should look like this</p>
     <p class="rem-3">Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors. Put it all together and your pages should look like this</p>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="column-1 column-4">
+                <input type="text" class="form-control">
+            </div>
+            <div class="column-1 column-5">
+                <input type="text" class="form-control">
+            </div>
+            <div class="column-1 column-3">
+                <select class="form-control">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
